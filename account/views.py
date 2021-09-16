@@ -64,8 +64,11 @@ def connexion(request):
 
             user = authenticate(request, email=email, password=password)
             if user is not None:
-                login(request, user)
-                return redirect('account:espace')
+                if user.is_active == False:
+                    return render("account/confirme.html")
+                else:
+                    login(request, user)
+                    return redirect('account:espace')
 
             else:
                 messages.info(request, 'Username OR password is incorrect')
