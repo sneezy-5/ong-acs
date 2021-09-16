@@ -1,0 +1,86 @@
+{% extends 'acs_home/base.html' %}
+  {% load static %}
+  
+  {% block style %}
+
+  <link rel="stylesheet" href="{% static 'acs_home/css/spoileractiviter.css' %}">
+  <link href="{% static 'fontawesome-free-5.14.0-web/css/all.min.css' %}" rel="stylesheet">
+  {% endblock %}
+  
+  {% block contend %}
+
+
+    
+         <div class="banniere">
+             <h2>ACTIVITES</h2>
+             <h5>participons au bonheur de tous</h5>
+         </div>
+
+
+      <div class="centre">
+
+          <div class="leftbars">
+
+               <div class="container">
+                   <img src="{{ acti_picture.url }}" alt="" height="200" width="200" class="imgcontainer">
+                   <h3 class="titre titreactu">{{ acti_title }}</h3>
+                   <p class="text textactu">
+                    {{ acti_describe }}
+                  </p>
+               </div>
+
+          </div>
+
+          <div class="rightbars">
+            <iframe data-offset="70" data-constraint=".rightbars" class="pluginfb plgnonrespons" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fongacs12&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=197812702312256" width="auto" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            <iframe class="pluginfb plgrespons" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fongacs12&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=197812702312256" width="auto" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+          </div>
+
+      </div>
+
+      <footer>
+
+        <p><strong>ONG</strong> ACS</p>
+       <div class="bars">
+    
+        <div>
+            
+            <strong>Organisation Non Gouvernementale</strong><br>
+            Siège social :   Abidjan Cocody -angré cité caféier 8lot94<br>
+            Mobile : +225 07 79 13 96 76
+            Mobile : +225 07 69 34 08 18
+            Mobile : +33  75 112 19 40
+            Email : ongacs12@gmail.com  
+            
+         </div>
+         
+         <div>
+           <span>NOS VALEURS</span><br>
+            -Responsabilité - Transparence - Qualités des Services - Esprit d'équipe - Intégrité et Respect
+         </div>
+    
+         <div>
+          <span>NOS ATOUTS</span><br>
+          Rigueur – Dynamisme – Respect de la clientèle et du planning – Compétence.
+         </div>
+    
+         <div>
+          <span>CONTACTEZ-NOUS</span><br>
+         <a href="https://web.facebook.com/ongacs12" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://gmail.com" target="_blanc"><i class="fab fa-google-plus-g"></i></a>
+         </div>
+       </div>
+    
+       <div class="sign">
+        © <span>ESO-DEV</span> 2021 | Agence web - Marketing Digital-Abidjan
+      </div>
+      </footer>
+
+          <div  class="btn-devis">ADHERER À ONG-ACS<i class="fa fa-clipboard-list"></i></div>
+     </div>
+
+{% endblock%}
+
+<script src="{% static '/acs_home/js/spoileractiviter.js' %}"></script>         
+</body>
+</html>

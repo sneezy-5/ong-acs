@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*javscript aside*/
+.aside{
+    position:fixed;
+    height:100%;
+    width:100%;
+    background:#0000007a;
+    z-index:10000;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.aside .case{
+    height:250px;
+    width:auto;
+    background:aliceblue;
+    border-radius:5px;
+    display:flex;
+    padding-top:50px;
+    padding:20px;
+    line-height:25px;
+    flex-direction:column;
+    align-items:center;
+    white-space:break-spaces
+}
+
+.case{
+    font-family: 'Comfortaa', cursive;
+    font-size:15px
+}
+
+.case p{
+    padding-right:50px
+}
+
+.case .btn{
+    position:relative;
+    text-align:center;
+    top:50px;
+    height:50px;
+    width:280px;
+    background: #417db1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:15px;
+    color:aliceblue;
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.5s;
+    text-decoration:none;
+}
+
+.case .btn:hover{
+    background:#3fa5ff;
+    transition:0.5s
+}
+
+
+.case i{
+    font-size:30px;
+    margin-right:5px;
+    animation:lent 1.5s infinite
+}
+
+
+@keyframes lent{
+   0%{
+       opacity:0;
+       transform:translateX(0px)
+   }
+
+
+
+     100%{
+       transform:translateX(-20px)
+   }
+}

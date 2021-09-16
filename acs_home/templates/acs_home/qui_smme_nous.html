@@ -1,0 +1,156 @@
+{% extends 'acs_home/base.html' %}
+{% load static %}
+    {% load widget_tweaks %}
+
+{% block style %}
+
+<link rel="stylesheet" href="{% static 'acs_home/css/QuiSommeNous.css' %}">
+<link rel="stylesheet" href="{% static 'fontawesome-free-5.14.0-web/css/all.min.css' %}">
+{% endblock %}
+
+{% block contend %}
+
+<div class="banniere">
+    <h2>QUI-SOMME-NOUS</h2>
+    <h5>participons au bonheur de tous</h5>
+</div>
+
+<div class="centre">
+    <div class="leftbars">
+      <div class="prensentation">
+          <h3><span class="ong">ONG</span> <span class="acs">ACS</span></h3>
+          <p>
+            <strong>A</strong>ide au <span>C</span>entre <span>S</span>anitaire, a été créé le 04 Avril 2019 à Abidjan,ayant pour objectif:Apporter une assistance, un soutien aux centres sanitaires
+              afin de permettre aux personnels de ces centres de travailler dans de meilleures conditions.Ensuite, lutter contre le manque d'accès aux services sanitaires des populations en zone défavorable
+          </p>
+       </div>
+
+       <div class="cases">
+         <div class="cas">
+             <div class="icone">
+               <i class="fa fa-compress-arrows-alt"></i>
+             </div>
+             <div class="contenu">
+               <h3>NOTRE-STRATEGIE</h3>
+               <p>
+                  La recherche de l'information et de la formation de ses membres;
+                 Entreprendre des visites de courtoisies auprès des centres de santés afin de s'aquérir de leurs besoins éventuels
+               
+               </p>
+             </div>
+         </div>
+
+
+         <div class="cas">
+
+           <div class="icone">
+             <i class="fa fa-users"></i>
+           </div>
+           <div class="contenu">
+             <h3>NOTRE-MISSION</h3>
+             <p>
+               C'est d'oeuvrer afin d'apporter une assistance, un soutien aux centres sanitaires afin de permettre aux personnelsde ces centres de travailler dans de meilleures conditions
+             </p>
+           </div>
+
+         </div>
+
+         <div class="cas">
+
+           <div class="icone">
+             <i class="fa fa-street-view"></i>
+           </div>
+           <div class="contenu">
+             <h3>NOS-VALEURS</h3>
+             <p>
+               ACS agit dans l'intérêt commun en assurant sa contribution au regard de l'amélioration de la vie des populations. Le faisant, elle maintien et développe la confiance du public.
+             </p>
+           </div>
+
+         </div>
+
+
+         <div class="cas">
+
+           <div class="icone">
+             <i class="fa fa-user"></i>
+           </div>
+           <div class="contenu">
+             <h3>NOTRE-BUT</h3>
+             <p>
+               C'est de contribuer à l'amélioration des conditions de vie des populations à travers la recherche et les actions de developpement  durable dans les zones défavorisées en priorité.
+             </p>
+           </div>
+         </div>
+     </div>
+
+     <div class="groupe">
+        <div class="groupeDiv1">
+         <h3>NOS MEMBRES</h3>
+         <p>
+             ONG-ACS compte  plusieurs angents ayant des Esprits de partage, de solidarité et de soutien dans le but d'aider les centres sanitaires 
+         </p>
+        </div>
+       <div class="groupeDiv2">
+           <div class="imgtext">
+              <img src="{% static '/img/Directeur.png' %}" alt="imageDG" height="100" width="100">
+              <p>
+                <strong>FONDATEUR</strong>
+                 Mr KONE LEBOUET JEAN CHARLES GUILLAUME, est le president fondateur de ONG-ACS 
+              </p>
+           </div>
+
+       </div>
+     </div>
+    </div>
+
+    <div class="rightbars">
+
+     <iframe data-offset="70" data-constraint=".rightbars" class="pluginfb plgnonrespons" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fongacs12&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=197812702312256" width="auto" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+     <iframe class="pluginfb plgrespons" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fongacs12&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=197812702312256" width="auto" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+    </div>
+
+    <footer>
+
+     <p><strong>ONG</strong> ACS</p>
+    <div class="bars">
+ 
+     <div>
+         
+         <strong>Organisation Non Gouvernementale</strong><br>
+         Siège social :   Abidjan Cocody -angré cité caféier 8lot94<br>
+         Mobile : +225 07 79 13 96 76
+         Mobile : +225 07 69 34 08 18
+         Mobile : +33  75 112 19 40
+         Email : ongacs12@gmail.com  
+         
+      </div>
+      
+      <div>
+        <span>NOS VALEURS</span><br>
+         -Responsabilité - Transparence - Qualités des Services - Esprit d'équipe - Intégrité et Respect
+      </div>
+ 
+      <div>
+       <span>NOS ATOUTS</span><br>
+       Rigueur – Dynamisme – Respect de la clientèle et du planning – Compétence.
+      </div>
+ 
+      <div>
+       <span>CONTACTEZ-NOUS</span><br>
+      <a href="https://web.facebook.com/ongacs12" target="_blank"><i class="fab fa-facebook-f"></i></a>
+     <a href="https://gmail.com" target="_blanc"><i class="fab fa-google-plus-g"></i></a>
+      </div>
+    </div>
+ 
+    <div class="sign">
+     © <span>ESO-DEV</span> 2021 | Agence web - Marketing Digital-Abidjan
+   </div>
+   </footer>
+
+     <div class="btn-devis">ADHERER À ONG-ACS<i class="fa fa-clipboard-list"></i></div>
+</div>
+<script src="{% static 'acs_home/js/QuiSommeNous.js' %}"></script>>
+
+{% endblock %}

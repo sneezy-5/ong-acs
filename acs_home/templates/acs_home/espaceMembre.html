@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static '/acs_home/css/espaceMembre.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+        <!--les liens-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fontawesome-free-5.14.0-web/css/all.min.css' %}">
+</head>
+<body>
+    <div class="parent">
+        <div class="leftbars">
+
+            <div class="Titre">
+                <!--recharger l'image-->
+               <form action="#" class="form">
+                    <label for="fichier" class="label-img">
+                       <canvas></canvas>
+                    </label>
+                    <input type="file" class="input-file" id="fichier">
+               </form>
+
+                <h3>{{request.user.last_name}}</h3>
+            </div>
+            <div class="contenu">
+
+               <div class="param active">
+                   <h4>Voir Mes Dons</h4>
+                   <i class="fa fa-eye"></i>
+               </div>
+
+               <div class="param">
+                  <h4>Faire un don</h4>
+                  <i class="fa fa-money-bill-wave"></i>
+               </div>
+
+               <div class="param">
+                <h4>Adhérer à ONG-ACS</h4>
+                <i class="fa fa-clipboard-list"></i>
+             </div>
+            </div>
+
+        </div>
+
+        <div class="rightbars blokadherent">
+
+            <div class="banniere">
+                <h2 class="titrebanniere">voir mes Dons</h2>
+            </div>
+            <div class="centre">
+                <div class="cas">
+                    <img src="{% static '/acs_home/css/img/ong5.jpg' %}" alt="" height="200" width="200">
+                    <div class="contenue">
+                        <div class="titre">
+                            Votre don à servir à .....
+                        </div>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis aliquid quisquam sint, at id corporis eligendi cumque voluptas perferendis nam alias ab eaque. Itaque consequatur exercitationem amet. Culpa, numquam!
+                        </p>
+                    </div>
+                </div>
+                <div class="cas">
+                 <img src="{% static '/img/ong6.jpg' %}" alt="" height="200" width="200">
+                 <div class="contenue">
+                     <div class="titre">
+                         Votre don à servir à .....
+                     </div>
+                     <p>
+                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis aliquid quisquam sint, at id corporis eligendi cumque voluptas perferendis nam alias ab eaque. Itaque consequatur exercitationem amet. Culpa, numquam!
+                     </p>
+                 </div>
+                </div>
+                <div class="cas">
+                 <img src="{% static '/img/ong7.jpg' %}" alt="" height="200" width="200">
+                 <div class="contenue">
+                     <div class="titre">
+                         Votre don à servir à .....
+                     </div>
+                     <p>
+                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis aliquid quisquam sint, at id corporis eligendi cumque voluptas perferendis nam alias ab eaque. Itaque consequatur exercitationem amet. Culpa, numquam!
+                     </p>
+                 </div>
+                </div>
+                <div class="cas">
+                 <img src="{% static '/img/ong8.jpg' %}" alt="" height="200" width="200">
+                 <div class="contenue">
+                     <div class="titre">
+                         Votre don à servir à .....
+                     </div>
+                     <p>
+                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quis aliquid quisquam sint, at id corporis eligendi cumque voluptas perferendis nam alias ab eaque. Itaque consequatur exercitationem amet. Culpa, numquam!
+                     </p>
+                 </div>
+                </div>
+          </div>
+         
+         </div>
+</div>
+    <script src="{% static '/acs_home/js/espaceMembre.js' %}"></script>
+</body>
+</html>

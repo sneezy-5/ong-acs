@@ -1,0 +1,13 @@
+!.gitignore
+.git/
+acs_home/__pycache__/
+acs_load/__pycache__/
+ong_acs/__pycache__/
+account/__pycache__/
+acs_home/migrations/__pycache__/
+account/migrations/__pycache__/
+db.sqlite3
+django
+*.pyc
+staticfiles/
+.env/

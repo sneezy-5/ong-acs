@@ -1,0 +1,188 @@
+{% extends 'acs_home/base.html' %}
+
+{% load static %}
+{% block style %}
+
+<link rel="stylesheet" href="{% static 'acs_home/css/acceuil.css' %}">
+<link href="{% static 'fontawesome-free-5.14.0-web/css/all.min.css' %}" rel="stylesheet">
+{% endblock  %}
+
+{% block contend %}
+
+<div class="banniere">
+        
+
+  <div class="text">
+    <span>Bienvenue à <strong>ONG</strong><strong>ACS</strong> <br></span>
+    << Ouvrons aujourd'hui nos coeurs à la générosité et au partage. Que nos mains ne se ferment pas face aux difficultés de notre prochain....>> 
+  </div>
+
+</div>
+
+<div class="centre">
+  <div class="leftbars">
+      
+   <div class="cas">
+    <a href="{% url 'acs_home:qui_somme_nous' %}" class="liensbtn"><button class="btn">voir plus</button></a>
+
+    <div class="textcontenue contenttext">
+
+      <h4>Qui-Somme-Nous</h4>
+      <div>
+        <strong>A</strong>ide au <span>C</span>entre <span>S</span>anitaire, a été créé le 04 Avril 2019 à Abidjan,ayant pour objectif:Apporter une assistance, un soutien aux centres sanitaires
+          afin de permettre aux personnels .....<a href="#" style="color: rgb(240, 57, 87);">Poursuivre</a>
+      </div>
+
+    </div>
+
+   </div>
+
+   <div class="cas">
+     <div class="textcontenue2 contenttext">
+
+         <h4>Nos-Actualités</h4>
+         <div>
+           Suivez nos actualités partout dans le monde à travers notre plateforme....<a href="#" style="color: #042844;">Poursuivre</a>
+         </div>
+
+     </div>
+     <a href="{% url 'acs_home:actualite' %}" class="liensbtn"><button class="btn">voir plus</button></a>
+   </div>
+
+   <div class="cas">
+     <a href="#" class="liensbtn"><button class="btn">voir plus</button></a>
+
+     <div class="textcontenue3 contenttext">
+
+       <h4>Nos-Activités</h4>
+       <div>
+        Afin de mieux controler le paysan du guémon dans sont monde rural, une vaste compagne de récensement systématique des planteurs et des plantations villageoises  
+       </div>
+
+     </div>
+
+   </div>
+   <div class="cas">
+     <div class="textcontenue4 contenttext">
+
+       <h4>Notre-But</h4>
+
+       <div>
+         C'est de contribuer à l'amélioration des conditions de vie des populations à travers la recherche et les actions de developpement  durable dans les zones défavorisées en priorité.
+       </div>
+     </div>
+     <div class="img1 imgidt"></div>
+   </div>
+
+
+   <div class="cas">
+     <div class="img2 imgidt"></div>
+
+     <div class="textcontenue5 contenttext">
+       <h4>Nos-Objectifs</h4>
+       <div>
+         <ol>
+           <li>Promouvoir la proximité des centres de santé bien équipés dans l'offre des soins</li>
+           <li>Dévelloper la gestion d'un environnement sain et durable</li>
+           <li>Contribuer au renforcement des capacités des infrastructures médicales.</li>
+       </ol>
+       </div>
+     </div>
+   </div>
+   <div class="cas">
+
+     <div class="textcontenue6 contenttext">
+       <h4>Notre stratégie</h4>
+       <div>
+
+        <ol>
+          <li>La recherche de l'information et de la formation de ses membres;</li>
+          <li>Entreprendre des visites de courtoisies auprès des centres de santés afin de s'aquérir de leurs besoins éventuels;</li>
+          <li>L'établissement de relations de collaborations et de partenariats;</li>
+          <li>Le plaidoyer etc...</li>
+      </ol>
+       </div>
+     </div>
+
+     <div class="img4 imgidt"></div>
+   </div>
+
+
+   <div class="cas">
+     <div class="img5 imgidt"></div>
+
+     <div class="textcontenue7 contenttext">
+
+       <h4>Notre mission</h4>
+       <div>
+         C'est d'oeuvrer afin d'apporter une assistance, un soutien aux centres sanitaires afin de permettre aux personnelsde ces centres de travailler dans de meilleures conditions.Ensuite, lutter contre le manque d'accès aux services sanitaires des populations en zones défavorisées </div>
+
+     </div>
+   </div>
+   <div class="cas">
+     <div class="textcontenue8 contenttext">
+
+       <h4>Nos-valeur</h4>
+       <div>
+         ACS agit dans l'intérêt commun en assurant sa contribution au regard de l'amélioration de la vie des populations. Le faisant, elle maintien et développe la confiance du public.
+       </div>
+
+     </div>
+     <div class="img6 imgidt"></div>
+   </div>
+    <!---ajout de cas 17-18 pour froid et climatisation-->
+  </div>
+
+  
+  <div class="rightbars">
+
+    <iframe data-offset="70" data-constraint=".rightbars" class="pluginfb plgnonrespons" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fongacs12&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=197812702312256" width="auto" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    <iframe class="pluginfb plgrespons" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fongacs12&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=197812702312256" width="auto" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+
+  </div>
+
+
+  <footer>
+
+    <p><strong>ONG</strong> ACS</p>
+   <div class="bars">
+
+    <div>
+        
+        <strong>Organisation Non Gouvernementale</strong><br>
+        Siège social :   Abidjan Cocody -angré cité caféier 8lot94<br>
+        Mobile : +225 07 79 13 96 76
+        Mobile : +225 07 69 34 08 18
+        Mobile : +33  75 112 19 40
+        Email : ongacs12@gmail.com  
+        
+     </div>
+     
+     <div>
+       <span>NOS VALEURS</span><br>
+        -Responsabilité - Transparence - Qualités des Services - Esprit d'équipe - Intégrité et Respect
+     </div>
+
+     <div>
+      <span>NOS ATOUTS</span><br>
+      Rigueur – Dynamisme – Respect de la clientèle et du planning – Compétence.
+     </div>
+
+     <div>
+      <span>CONTACTEZ-NOUS</span><br>
+     <a href="https://web.facebook.com/ongacs12" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://gmail.com" target="_blanc"><i class="fab fa-google-plus-g"></i></a>
+     </div>
+   </div>
+
+   <div class="sign">
+    © <span>ESO-DEV</span> 2021 | Agence web - Marketing Digital-Abidjan
+  </div>
+  </footer>
+</div>
+
+<div  class="btn-devis">ADHERER À ONG-ACS<i class="fa fa-clipboard-list"></i></div>
+<script src="{% static '/acs_home/js/acceuil.js' %}"></script>  
+
+{% endblock  %}
+

@@ -1,0 +1,1455 @@
+Starting acs_home as root
+[2021-09-10 23:48:03 +0000] [12164] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/home/sneezy/django_project/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/sneezy/django_project/ong_acs
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: acs_home
+  default_proc_name: ong_acs.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fa2847e7e50>
+  on_reload: <function OnReload.on_reload at 0x7fa2847e7f70>
+  when_ready: <function WhenReady.when_ready at 0x7fa2847fc0d0>
+  pre_fork: <function Prefork.pre_fork at 0x7fa2847fc1f0>
+  post_fork: <function Postfork.post_fork at 0x7fa2847fc310>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fa2847fc430>
+  worker_int: <function WorkerInt.worker_int at 0x7fa2847fc550>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fa2847fc670>
+  pre_exec: <function PreExec.pre_exec at 0x7fa2847fc790>
+  pre_request: <function PreRequest.pre_request at 0x7fa2847fc8b0>
+  post_request: <function PostRequest.post_request at 0x7fa2847fc940>
+  child_exit: <function ChildExit.child_exit at 0x7fa2847fca60>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fa2847fcb80>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fa2847fcca0>
+  on_exit: <function OnExit.on_exit at 0x7fa2847fcdc0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-09-10 23:48:03 +0000] [12164] [INFO] Starting gunicorn 20.1.0
+[2021-09-10 23:48:03 +0000] [12164] [DEBUG] Arbiter booted
+[2021-09-10 23:48:03 +0000] [12164] [INFO] Listening at: unix:/home/sneezy/django_project/run/gunicorn.sock (12164)
+[2021-09-10 23:48:03 +0000] [12164] [INFO] Using worker: sync
+[2021-09-10 23:48:03 +0000] [12169] [INFO] Booting worker with pid: 12169
+[2021-09-10 23:48:03 +0000] [12170] [INFO] Booting worker with pid: 12170
+[2021-09-10 23:48:03 +0000] [12171] [INFO] Booting worker with pid: 12171
+[2021-09-10 23:48:04 +0000] [12164] [DEBUG] 3 workers
+[2021-09-11 07:18:30 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:12169)
+[2021-09-11 07:18:30 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:12170)
+[2021-09-11 07:18:30 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:12171)
+[2021-09-11 07:18:30 +0000] [12169] [INFO] Worker exiting (pid: 12169)
+[2021-09-11 07:18:30 +0000] [12170] [INFO] Worker exiting (pid: 12170)
+[2021-09-11 07:18:30 +0000] [12171] [INFO] Worker exiting (pid: 12171)
+[2021-09-11 07:18:31 +0000] [12164] [WARNING] Worker with pid 12169 was terminated due to signal 9
+[2021-09-11 07:18:31 +0000] [12164] [WARNING] Worker with pid 12171 was terminated due to signal 9
+[2021-09-11 07:18:31 +0000] [16488] [INFO] Booting worker with pid: 16488
+[2021-09-11 07:18:31 +0000] [16489] [INFO] Booting worker with pid: 16489
+[2021-09-11 07:18:31 +0000] [12164] [WARNING] Worker with pid 12170 was terminated due to signal 9
+[2021-09-11 07:18:31 +0000] [16490] [INFO] Booting worker with pid: 16490
+[2021-09-11 14:52:31 +0000] [16489] [DEBUG] GET /
+[2021-09-11 14:52:40 +0000] [16490] [DEBUG] GET /home/
+[2021-09-11 14:53:09 +0000] [16489] [DEBUG] GET /quisommenous/
+[2021-09-11 14:53:14 +0000] [16488] [DEBUG] GET /actualite/
+[2021-09-11 14:57:28 +0000] [16488] [DEBUG] GET /actualite/
+[2021-09-11 14:57:41 +0000] [16489] [DEBUG] GET /act
+Not Found: /act
+[2021-09-11 14:58:15 +0000] [16490] [DEBUG] GET /act
+Not Found: /act
+[2021-09-11 14:58:21 +0000] [16490] [DEBUG] GET /act
+Not Found: /act
+[2021-09-11 14:58:22 +0000] [16490] [DEBUG] GET /act
+Not Found: /act
+[2021-09-11 14:59:38 +0000] [16489] [DEBUG] GET /
+[2021-09-11 14:59:39 +0000] [16489] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2021-09-11 14:59:44 +0000] [16488] [DEBUG] GET /home/
+[2021-09-11 14:59:45 +0000] [16489] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2021-09-11 14:59:46 +0000] [16489] [DEBUG] Ignoring EPIPE
+[2021-09-11 14:59:53 +0000] [16488] [DEBUG] GET /home/s
+Not Found: /home/s
+[2021-09-11 14:59:53 +0000] [16490] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2021-09-11 14:59:53 +0000] [16490] [DEBUG] Ignoring EPIPE
+[2021-09-11 15:02:11 +0000] [16488] [DEBUG] GET /
+[2021-09-11 15:02:17 +0000] [16489] [DEBUG] GET /home/
+[2021-09-11 15:02:30 +0000] [16490] [DEBUG] GET /admin/
+[2021-09-11 15:02:31 +0000] [16490] [DEBUG] GET /admin/login/
+[2021-09-11 15:02:39 +0000] [16490] [DEBUG] GET /
+[2021-09-11 15:02:44 +0000] [16488] [DEBUG] GET /home/
+[2021-09-11 15:02:57 +0000] [16489] [DEBUG] GET /home/d
+Not Found: /home/d
+[2021-09-11 15:07:10 +0000] [16488] [DEBUG] GET /home/d
+Not Found: /home/d
+[2021-09-11 15:07:11 +0000] [16488] [DEBUG] GET /home/d
+Not Found: /home/d
+[2021-09-11 15:17:00 +0000] [16488] [DEBUG] GET /
+[2021-09-11 15:17:05 +0000] [16489] [DEBUG] GET /home/
+[2021-09-11 15:17:12 +0000] [16489] [DEBUG] GET /ho
+Not Found: /ho
+[2021-09-11 22:43:03 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:16488)
+[2021-09-11 22:43:04 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:16489)
+[2021-09-11 22:43:04 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:16490)
+[2021-09-11 22:43:04 +0000] [16490] [INFO] Worker exiting (pid: 16490)
+[2021-09-11 22:43:04 +0000] [16488] [INFO] Worker exiting (pid: 16488)
+[2021-09-11 22:43:04 +0000] [16489] [INFO] Worker exiting (pid: 16489)
+[2021-09-11 22:43:06 +0000] [12164] [WARNING] Worker with pid 16488 was terminated due to signal 9
+[2021-09-11 22:43:06 +0000] [12164] [WARNING] Worker with pid 16489 was terminated due to signal 9
+[2021-09-11 22:43:06 +0000] [12164] [WARNING] Worker with pid 16490 was terminated due to signal 9
+[2021-09-11 22:43:07 +0000] [67160] [INFO] Booting worker with pid: 67160
+[2021-09-11 22:43:07 +0000] [67159] [INFO] Booting worker with pid: 67159
+[2021-09-11 22:43:07 +0000] [67158] [INFO] Booting worker with pid: 67158
+[2021-09-12 07:28:07 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:67158)
+[2021-09-12 07:28:07 +0000] [67158] [INFO] Worker exiting (pid: 67158)
+[2021-09-12 07:28:07 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:67159)
+[2021-09-12 07:28:07 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:67160)
+[2021-09-12 07:28:07 +0000] [67160] [INFO] Worker exiting (pid: 67160)
+[2021-09-12 07:28:07 +0000] [67159] [INFO] Worker exiting (pid: 67159)
+[2021-09-12 07:28:08 +0000] [12164] [WARNING] Worker with pid 67158 was terminated due to signal 9
+[2021-09-12 07:28:08 +0000] [12164] [WARNING] Worker with pid 67159 was terminated due to signal 9
+[2021-09-12 07:28:08 +0000] [83371] [INFO] Booting worker with pid: 83371
+[2021-09-12 07:28:08 +0000] [83372] [INFO] Booting worker with pid: 83372
+[2021-09-12 07:28:08 +0000] [12164] [WARNING] Worker with pid 67160 was terminated due to signal 9
+[2021-09-12 07:28:08 +0000] [83373] [INFO] Booting worker with pid: 83373
+[2021-09-12 14:41:33 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:83371)
+[2021-09-12 14:41:33 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:83372)
+[2021-09-12 14:41:33 +0000] [12164] [CRITICAL] WORKER TIMEOUT (pid:83373)
+[2021-09-12 14:41:33 +0000] [83371] [INFO] Worker exiting (pid: 83371)
+[2021-09-12 14:41:33 +0000] [83372] [INFO] Worker exiting (pid: 83372)
+[2021-09-12 14:41:33 +0000] [83373] [INFO] Worker exiting (pid: 83373)
+[2021-09-12 14:41:34 +0000] [12164] [WARNING] Worker with pid 83372 was terminated due to signal 9
+[2021-09-12 14:41:34 +0000] [12164] [WARNING] Worker with pid 83373 was terminated due to signal 9
+[2021-09-12 14:41:34 +0000] [12164] [WARNING] Worker with pid 83371 was terminated due to signal 9
+[2021-09-12 14:41:38 +0000] [112006] [INFO] Booting worker with pid: 112006
+[2021-09-12 14:41:38 +0000] [112007] [INFO] Booting worker with pid: 112007
+[2021-09-12 14:41:38 +0000] [112009] [INFO] Booting worker with pid: 112009
+Starting ong_acs as root
+[2021-09-12 15:43:50 +0000] [1968] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/home/sneezy/django_project/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/sneezy/django_project/ong_acs
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: ong_acs
+  default_proc_name: ong_acs.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7ff54620cee0>
+  on_reload: <function OnReload.on_reload at 0x7ff546220040>
+  when_ready: <function WhenReady.when_ready at 0x7ff546220160>
+  pre_fork: <function Prefork.pre_fork at 0x7ff546220280>
+  post_fork: <function Postfork.post_fork at 0x7ff5462203a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7ff5462204c0>
+  worker_int: <function WorkerInt.worker_int at 0x7ff5462205e0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7ff546220700>
+  pre_exec: <function PreExec.pre_exec at 0x7ff546220820>
+  pre_request: <function PreRequest.pre_request at 0x7ff546220940>
+  post_request: <function PostRequest.post_request at 0x7ff5462209d0>
+  child_exit: <function ChildExit.child_exit at 0x7ff546220af0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7ff546220c10>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7ff546220d30>
+  on_exit: <function OnExit.on_exit at 0x7ff546220e50>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-09-12 15:43:50 +0000] [1968] [INFO] Starting gunicorn 20.1.0
+[2021-09-12 15:43:50 +0000] [1968] [DEBUG] Arbiter booted
+[2021-09-12 15:43:50 +0000] [1968] [INFO] Listening at: unix:/home/sneezy/django_project/run/gunicorn.sock (1968)
+[2021-09-12 15:43:50 +0000] [1968] [INFO] Using worker: sync
+[2021-09-12 15:43:50 +0000] [2373] [INFO] Booting worker with pid: 2373
+[2021-09-12 15:43:51 +0000] [2374] [INFO] Booting worker with pid: 2374
+[2021-09-12 15:43:51 +0000] [2375] [INFO] Booting worker with pid: 2375
+[2021-09-12 15:43:51 +0000] [1968] [DEBUG] 3 workers
+Starting ong_acs as root
+[2021-09-12 15:51:35 +0000] [1924] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/home/sneezy/django_project/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/sneezy/django_project/ong_acs
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: ong_acs
+  default_proc_name: ong_acs.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f39db64fee0>
+  on_reload: <function OnReload.on_reload at 0x7f39db663040>
+  when_ready: <function WhenReady.when_ready at 0x7f39db663160>
+  pre_fork: <function Prefork.pre_fork at 0x7f39db663280>
+  post_fork: <function Postfork.post_fork at 0x7f39db6633a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f39db6634c0>
+  worker_int: <function WorkerInt.worker_int at 0x7f39db6635e0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f39db663700>
+  pre_exec: <function PreExec.pre_exec at 0x7f39db663820>
+  pre_request: <function PreRequest.pre_request at 0x7f39db663940>
+  post_request: <function PostRequest.post_request at 0x7f39db6639d0>
+  child_exit: <function ChildExit.child_exit at 0x7f39db663af0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f39db663c10>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f39db663d30>
+  on_exit: <function OnExit.on_exit at 0x7f39db663e50>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-09-12 15:51:35 +0000] [1924] [INFO] Starting gunicorn 20.1.0
+[2021-09-12 15:51:35 +0000] [1924] [DEBUG] Arbiter booted
+[2021-09-12 15:51:35 +0000] [1924] [INFO] Listening at: unix:/home/sneezy/django_project/run/gunicorn.sock (1924)
+[2021-09-12 15:51:35 +0000] [1924] [INFO] Using worker: sync
+[2021-09-12 15:51:35 +0000] [2342] [INFO] Booting worker with pid: 2342
+[2021-09-12 15:51:35 +0000] [2343] [INFO] Booting worker with pid: 2343
+[2021-09-12 15:51:35 +0000] [2344] [INFO] Booting worker with pid: 2344
+[2021-09-12 15:51:35 +0000] [1924] [DEBUG] 3 workers
+[2021-09-12 16:02:07 +0000] [2342] [DEBUG] GET /
+[2021-09-12 16:02:13 +0000] [2343] [DEBUG] GET /home/
+[2021-09-12 16:23:09 +0000] [2343] [DEBUG] GET /faire_don/
+[2021-09-12 16:24:33 +0000] [2342] [DEBUG] GET /faire_don/
+[2021-09-12 16:27:41 +0000] [2342] [DEBUG] GET /faire_don/
+[2021-09-12 16:51:54 +0000] [2342] [DEBUG] GET /
+[2021-09-12 16:52:00 +0000] [2344] [DEBUG] GET /home/
+[2021-09-12 16:52:00 +0000] [2342] [DEBUG] GET /home/img/logo.png
+[2021-09-12 16:52:00 +0000] [2343] [DEBUG] GET /home/img/logo.png
+[2021-09-12 16:52:01 +0000] [2342] [DEBUG] GET /favicon.ico
+[2021-09-12 16:52:01 +0000] [2342] [DEBUG] Ignoring EPIPE
+[2021-09-12 17:04:50 +0000] [2344] [DEBUG] GET /quisommenous/
+[2021-09-12 17:04:50 +0000] [2344] [DEBUG] GET /quisommenous/img/logo.png
+[2021-09-12 17:12:49 +0000] [2342] [DEBUG] GET /actualite/
+[2021-09-12 17:12:49 +0000] [2343] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 17:12:49 +0000] [2344] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 17:12:49 +0000] [2344] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 17:12:49 +0000] [2343] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 17:12:50 +0000] [2342] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 17:19:22 +0000] [2342] [DEBUG] GET /actualite/
+[2021-09-12 17:19:22 +0000] [2343] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 17:19:22 +0000] [2343] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 17:19:22 +0000] [2344] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 17:19:22 +0000] [2343] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 17:19:22 +0000] [2343] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 17:28:52 +0000] [2344] [DEBUG] GET /actualite/
+[2021-09-12 17:28:52 +0000] [2343] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 17:28:52 +0000] [2342] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 17:28:52 +0000] [2343] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 17:28:52 +0000] [2342] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 17:28:52 +0000] [2342] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 17:49:41 +0000] [1924] [CRITICAL] WORKER TIMEOUT (pid:2342)
+[2021-09-12 17:49:41 +0000] [1924] [CRITICAL] WORKER TIMEOUT (pid:2343)
+[2021-09-12 17:49:41 +0000] [2342] [INFO] Worker exiting (pid: 2342)
+[2021-09-12 17:49:41 +0000] [2343] [INFO] Worker exiting (pid: 2343)
+[2021-09-12 17:49:41 +0000] [1924] [CRITICAL] WORKER TIMEOUT (pid:2344)
+[2021-09-12 17:49:41 +0000] [2344] [INFO] Worker exiting (pid: 2344)
+[2021-09-12 17:49:42 +0000] [1924] [WARNING] Worker with pid 2343 was terminated due to signal 9
+[2021-09-12 17:49:42 +0000] [1924] [WARNING] Worker with pid 2344 was terminated due to signal 9
+[2021-09-12 17:49:42 +0000] [10897] [INFO] Booting worker with pid: 10897
+[2021-09-12 17:49:42 +0000] [10902] [INFO] Booting worker with pid: 10902
+[2021-09-12 17:49:42 +0000] [1924] [WARNING] Worker with pid 2342 was terminated due to signal 9
+[2021-09-12 17:49:42 +0000] [10908] [INFO] Booting worker with pid: 10908
+[2021-09-12 17:51:14 +0000] [10897] [DEBUG] GET /
+[2021-09-12 17:51:15 +0000] [10902] [DEBUG] GET /favicon.ico
+[2021-09-12 17:51:20 +0000] [10908] [DEBUG] GET /home/
+[2021-09-12 17:51:20 +0000] [10908] [DEBUG] GET /home/img/logo.png
+[2021-09-12 17:51:25 +0000] [10902] [DEBUG] GET /actualite/
+[2021-09-12 17:51:25 +0000] [10908] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 17:51:25 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 17:51:25 +0000] [10897] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 17:51:25 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 17:51:25 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 17:53:14 +0000] [10897] [DEBUG] GET /actualite/
+[2021-09-12 17:53:14 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 17:53:14 +0000] [10897] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 17:53:14 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 17:53:14 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 17:53:14 +0000] [10902] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 17:56:42 +0000] [10902] [DEBUG] GET /actualite/
+[2021-09-12 17:56:42 +0000] [10902] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 17:56:42 +0000] [10897] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 17:56:42 +0000] [10902] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 17:56:42 +0000] [10902] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 17:56:42 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 17:56:42 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:00:00 +0000] [10897] [DEBUG] GET /actualite/
+[2021-09-12 18:00:00 +0000] [10908] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:00:00 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:00:00 +0000] [10902] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:00:00 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:00:00 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:00:00 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:02:08 +0000] [10908] [DEBUG] GET /actualite/
+[2021-09-12 18:02:08 +0000] [10908] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:02:08 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:02:08 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:02:08 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:02:08 +0000] [10897] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:02:08 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:03:48 +0000] [10908] [DEBUG] GET /actualite/
+[2021-09-12 18:03:48 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:03:48 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:03:48 +0000] [10897] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:03:48 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:03:48 +0000] [10897] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:06:39 +0000] [10908] [DEBUG] GET /actualite/
+[2021-09-12 18:06:39 +0000] [10908] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:06:39 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:06:39 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:06:39 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:06:39 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:06:39 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:06:43 +0000] [10902] [DEBUG] GET /actualite/
+[2021-09-12 18:06:43 +0000] [10908] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:06:43 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:06:43 +0000] [10897] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:06:43 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:06:43 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:06:43 +0000] [10897] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:06:48 +0000] [10897] [DEBUG] GET /actualite/
+[2021-09-12 18:06:49 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:06:49 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:06:49 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:06:49 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:06:49 +0000] [10902] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:06:49 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:06:49 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:06:49 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:06:49 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:06:49 +0000] [10902] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:13:04 +0000] [10908] [DEBUG] GET /actualite/
+[2021-09-12 18:13:04 +0000] [10902] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:13:04 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:13:04 +0000] [10897] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:13:04 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:13:04 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:13:12 +0000] [10908] [DEBUG] GET /actualite/
+[2021-09-12 18:13:12 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:13:12 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:13:12 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:13:12 +0000] [10902] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:13:12 +0000] [10897] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:13:12 +0000] [10897] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:16:47 +0000] [10897] [DEBUG] GET /actualite/
+[2021-09-12 18:16:48 +0000] [10902] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:16:48 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:16:48 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:16:48 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:16:48 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:17:34 +0000] [10908] [DEBUG] GET /actualite/
+[2021-09-12 18:17:34 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:17:34 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:17:34 +0000] [10902] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:17:34 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:17:34 +0000] [10902] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:17:41 +0000] [10908] [DEBUG] GET /actualite/
+[2021-09-12 18:17:41 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:17:41 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:17:41 +0000] [10897] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:17:41 +0000] [10902] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:17:41 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:18:59 +0000] [10902] [DEBUG] GET /actualite/
+[2021-09-12 18:18:59 +0000] [10897] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:18:59 +0000] [10902] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:18:59 +0000] [10908] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:18:59 +0000] [10902] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:18:59 +0000] [10902] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:19:03 +0000] [10902] [DEBUG] GET /actualite/
+[2021-09-12 18:19:03 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:19:03 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:19:03 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:19:03 +0000] [10902] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:19:03 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:20:13 +0000] [10908] [DEBUG] GET /actualite/
+[2021-09-12 18:20:13 +0000] [10908] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:20:13 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:20:13 +0000] [10902] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:20:13 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:20:13 +0000] [10897] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:20:14 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:20:14 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:20:14 +0000] [10902] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:20:14 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:21:02 +0000] [10897] [DEBUG] GET /actualite/
+[2021-09-12 18:21:02 +0000] [10902] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:21:02 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:21:02 +0000] [10897] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:21:02 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:21:02 +0000] [10902] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:21:02 +0000] [10897] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:21:53 +0000] [10897] [DEBUG] GET /actualite/
+[2021-09-12 18:21:53 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:21:53 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:21:53 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:21:53 +0000] [10902] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:21:53 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:21:53 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:22:14 +0000] [10897] [DEBUG] GET /actualite/
+[2021-09-12 18:22:15 +0000] [10902] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:22:15 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:22:15 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:22:15 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:22:15 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:22:15 +0000] [10908] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:22:15 +0000] [10897] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:22:15 +0000] [10897] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:22:15 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:22:15 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:23:30 +0000] [10897] [DEBUG] GET /actualite/
+[2021-09-12 18:23:30 +0000] [10902] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:23:30 +0000] [10897] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:23:30 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:23:30 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:23:30 +0000] [10897] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:23:30 +0000] [10897] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:23:32 +0000] [10902] [DEBUG] GET /actualite/
+[2021-09-12 18:23:32 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:23:32 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:23:32 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:23:32 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:23:32 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:23:32 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:23:35 +0000] [10908] [DEBUG] GET /actualite/
+[2021-09-12 18:23:35 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:23:35 +0000] [10908] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:23:35 +0000] [10897] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:23:35 +0000] [10908] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:23:35 +0000] [10902] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:23:47 +0000] [10902] [DEBUG] GET /actualite/
+[2021-09-12 18:23:47 +0000] [10902] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:23:47 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:23:47 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:23:47 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:23:47 +0000] [10908] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:23:47 +0000] [10902] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:24:40 +0000] [10902] [DEBUG] GET /actualite/
+[2021-09-12 18:24:40 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:24:40 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:24:40 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:24:40 +0000] [10897] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:24:40 +0000] [10897] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:24:40 +0000] [10908] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:24:42 +0000] [10902] [DEBUG] GET /actualite/
+[2021-09-12 18:24:42 +0000] [10897] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:24:42 +0000] [10902] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:24:42 +0000] [10908] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:24:42 +0000] [10902] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:24:42 +0000] [10902] [DEBUG] GET /actualite/img/ong11.jpg
+Starting ong_acs as root
+[2021-09-12 18:27:13 +0000] [1619] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/home/sneezy/django_project/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/sneezy/django_project/ong_acs
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: ong_acs
+  default_proc_name: ong_acs.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f515d5fdee0>
+  on_reload: <function OnReload.on_reload at 0x7f515d611040>
+  when_ready: <function WhenReady.when_ready at 0x7f515d611160>
+  pre_fork: <function Prefork.pre_fork at 0x7f515d611280>
+  post_fork: <function Postfork.post_fork at 0x7f515d6113a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f515d6114c0>
+  worker_int: <function WorkerInt.worker_int at 0x7f515d6115e0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f515d611700>
+  pre_exec: <function PreExec.pre_exec at 0x7f515d611820>
+  pre_request: <function PreRequest.pre_request at 0x7f515d611940>
+  post_request: <function PostRequest.post_request at 0x7f515d6119d0>
+  child_exit: <function ChildExit.child_exit at 0x7f515d611af0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f515d611c10>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f515d611d30>
+  on_exit: <function OnExit.on_exit at 0x7f515d611e50>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-09-12 18:27:13 +0000] [1619] [INFO] Starting gunicorn 20.1.0
+[2021-09-12 18:27:13 +0000] [1619] [DEBUG] Arbiter booted
+[2021-09-12 18:27:13 +0000] [1619] [INFO] Listening at: unix:/home/sneezy/django_project/run/gunicorn.sock (1619)
+[2021-09-12 18:27:13 +0000] [1619] [INFO] Using worker: sync
+[2021-09-12 18:27:13 +0000] [2018] [INFO] Booting worker with pid: 2018
+[2021-09-12 18:27:13 +0000] [2019] [INFO] Booting worker with pid: 2019
+[2021-09-12 18:27:13 +0000] [2020] [INFO] Booting worker with pid: 2020
+[2021-09-12 18:27:13 +0000] [1619] [DEBUG] 3 workers
+[2021-09-12 18:30:32 +0000] [2019] [DEBUG] GET /actualite/img/ong2.jpg
+[2021-09-12 18:30:32 +0000] [2018] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:30:32 +0000] [2020] [DEBUG] GET /actualite/img/ong4.jpg
+[2021-09-12 18:30:34 +0000] [2020] [DEBUG] GET /actualite/img/ong12.jpg
+[2021-09-12 18:30:34 +0000] [2018] [DEBUG] GET /actualite/img/ong11.jpg
+[2021-09-12 18:30:34 +0000] [2020] [DEBUG] GET /favicon.ico
+[2021-09-12 18:30:37 +0000] [2019] [DEBUG] GET /actualite/
+[2021-09-12 18:30:37 +0000] [2018] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:32:13 +0000] [2020] [DEBUG] GET /favicon.ico
+[2021-09-12 18:32:17 +0000] [2018] [DEBUG] GET /actualite/
+[2021-09-12 18:32:17 +0000] [2020] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:32:17 +0000] [2020] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:32:44 +0000] [2019] [DEBUG] GET /actualite/
+[2021-09-12 18:32:44 +0000] [2019] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:32:47 +0000] [2020] [DEBUG] GET /actualite/
+[2021-09-12 18:32:47 +0000] [2019] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:32:55 +0000] [2018] [DEBUG] GET /actualite/
+[2021-09-12 18:32:55 +0000] [2018] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:32:55 +0000] [2019] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:32:58 +0000] [2020] [DEBUG] GET /actualite/
+[2021-09-12 18:32:58 +0000] [2018] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:32:58 +0000] [2019] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:33:00 +0000] [2020] [DEBUG] GET /actualite/
+[2021-09-12 18:33:00 +0000] [2020] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:33:00 +0000] [2018] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:33:21 +0000] [2018] [DEBUG] GET /actualite/
+[2021-09-12 18:33:21 +0000] [2019] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:33:27 +0000] [2018] [DEBUG] GET /actualite/
+[2021-09-12 18:33:27 +0000] [2018] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:34:04 +0000] [2018] [DEBUG] GET /actualite/
+[2021-09-12 18:34:04 +0000] [2019] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:34:05 +0000] [2018] [DEBUG] GET /actualite/
+[2021-09-12 18:34:05 +0000] [2020] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:34:06 +0000] [2020] [DEBUG] GET /actualite/
+[2021-09-12 18:34:06 +0000] [2019] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:35:35 +0000] [2018] [DEBUG] GET /actualite/
+[2021-09-12 18:35:35 +0000] [2019] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:35:41 +0000] [2020] [DEBUG] GET /actualite/
+[2021-09-12 18:35:41 +0000] [2018] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:35:46 +0000] [2019] [DEBUG] GET /actualite/
+[2021-09-12 18:35:46 +0000] [2020] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:35:47 +0000] [2018] [DEBUG] GET /actualite/img/logo.png
+[2021-09-12 18:35:48 +0000] [2019] [DEBUG] GET /actualite/
+[2021-09-12 18:35:48 +0000] [2018] [DEBUG] GET /actualite/img/logo.png
+[2021-09-13 00:11:01 +0000] [1619] [CRITICAL] WORKER TIMEOUT (pid:2018)
+[2021-09-13 00:11:01 +0000] [2018] [INFO] Worker exiting (pid: 2018)
+[2021-09-13 00:11:01 +0000] [1619] [CRITICAL] WORKER TIMEOUT (pid:2019)
+[2021-09-13 00:11:01 +0000] [1619] [CRITICAL] WORKER TIMEOUT (pid:2020)
+[2021-09-13 00:11:01 +0000] [2019] [INFO] Worker exiting (pid: 2019)
+[2021-09-13 00:11:01 +0000] [2020] [INFO] Worker exiting (pid: 2020)
+[2021-09-13 00:11:01 +0000] [6826] [INFO] Booting worker with pid: 6826
+[2021-09-13 00:11:01 +0000] [1619] [WARNING] Worker with pid 2019 was terminated due to signal 9
+[2021-09-13 00:11:01 +0000] [1619] [WARNING] Worker with pid 2020 was terminated due to signal 9
+[2021-09-13 00:11:01 +0000] [1619] [DEBUG] 1 workers
+[2021-09-13 00:11:01 +0000] [6827] [INFO] Booting worker with pid: 6827
+[2021-09-13 00:11:01 +0000] [6828] [INFO] Booting worker with pid: 6828
+[2021-09-13 00:11:02 +0000] [1619] [DEBUG] 3 workers
+[2021-09-13 07:41:55 +0000] [1619] [CRITICAL] WORKER TIMEOUT (pid:6826)
+[2021-09-13 07:41:56 +0000] [6826] [INFO] Worker exiting (pid: 6826)
+[2021-09-13 07:41:59 +0000] [21961] [INFO] Booting worker with pid: 21961
+Starting ong_acs as root
+[2021-09-13 11:47:49 +0000] [1790] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/home/sneezy/django_project/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/sneezy/django_project/ong_acs
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: ong_acs
+  default_proc_name: ong_acs.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f4b19d2aee0>
+  on_reload: <function OnReload.on_reload at 0x7f4b19d3e040>
+  when_ready: <function WhenReady.when_ready at 0x7f4b19d3e160>
+  pre_fork: <function Prefork.pre_fork at 0x7f4b19d3e280>
+  post_fork: <function Postfork.post_fork at 0x7f4b19d3e3a0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f4b19d3e4c0>
+  worker_int: <function WorkerInt.worker_int at 0x7f4b19d3e5e0>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f4b19d3e700>
+  pre_exec: <function PreExec.pre_exec at 0x7f4b19d3e820>
+  pre_request: <function PreRequest.pre_request at 0x7f4b19d3e940>
+  post_request: <function PostRequest.post_request at 0x7f4b19d3e9d0>
+  child_exit: <function ChildExit.child_exit at 0x7f4b19d3eaf0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f4b19d3ec10>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f4b19d3ed30>
+  on_exit: <function OnExit.on_exit at 0x7f4b19d3ee50>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-09-13 11:47:49 +0000] [1790] [INFO] Starting gunicorn 20.1.0
+[2021-09-13 11:47:50 +0000] [1790] [DEBUG] Arbiter booted
+[2021-09-13 11:47:50 +0000] [1790] [INFO] Listening at: unix:/home/sneezy/django_project/run/gunicorn.sock (1790)
+[2021-09-13 11:47:50 +0000] [1790] [INFO] Using worker: sync
+[2021-09-13 11:47:50 +0000] [2182] [INFO] Booting worker with pid: 2182
+[2021-09-13 11:47:50 +0000] [2183] [INFO] Booting worker with pid: 2183
+[2021-09-13 11:47:50 +0000] [2187] [INFO] Booting worker with pid: 2187
+[2021-09-13 11:47:50 +0000] [1790] [DEBUG] 3 workers
+[2021-09-13 11:48:20 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:2182)
+[2021-09-13 11:48:20 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:2183)
+[2021-09-13 11:48:20 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:2187)
+[2021-09-13 11:48:20 +0000] [2183] [INFO] Worker exiting (pid: 2183)
+[2021-09-13 11:48:20 +0000] [2182] [INFO] Worker exiting (pid: 2182)
+[2021-09-13 11:48:20 +0000] [2187] [INFO] Worker exiting (pid: 2187)
+[2021-09-13 11:48:20 +0000] [2319] [INFO] Booting worker with pid: 2319
+[2021-09-13 11:48:20 +0000] [1790] [WARNING] Worker with pid 2182 was terminated due to signal 9
+[2021-09-13 11:48:20 +0000] [1790] [WARNING] Worker with pid 2183 was terminated due to signal 9
+[2021-09-13 11:48:20 +0000] [1790] [DEBUG] 1 workers
+[2021-09-13 11:48:20 +0000] [2320] [INFO] Booting worker with pid: 2320
+[2021-09-13 11:48:20 +0000] [2321] [INFO] Booting worker with pid: 2321
+[2021-09-13 11:48:20 +0000] [1790] [DEBUG] 3 workers
+[2021-09-13 19:38:41 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:2319)
+[2021-09-13 19:38:41 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:2320)
+[2021-09-13 19:38:41 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:2321)
+[2021-09-13 19:38:41 +0000] [2320] [INFO] Worker exiting (pid: 2320)
+[2021-09-13 19:38:41 +0000] [2319] [INFO] Worker exiting (pid: 2319)
+[2021-09-13 19:38:41 +0000] [2321] [INFO] Worker exiting (pid: 2321)
+[2021-09-13 19:38:41 +0000] [18782] [INFO] Booting worker with pid: 18782
+[2021-09-13 19:38:41 +0000] [1790] [WARNING] Worker with pid 2321 was terminated due to signal 9
+[2021-09-13 19:38:41 +0000] [1790] [DEBUG] 2 workers
+[2021-09-13 19:38:41 +0000] [18783] [INFO] Booting worker with pid: 18783
+[2021-09-13 19:38:42 +0000] [1790] [DEBUG] 3 workers
+[2021-09-13 19:38:42 +0000] [1790] [WARNING] Worker with pid 2319 was terminated due to signal 9
+[2021-09-13 19:38:42 +0000] [18784] [INFO] Booting worker with pid: 18784
+[2021-09-13 22:36:41 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:18782)
+[2021-09-13 22:36:41 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:18783)
+[2021-09-13 22:36:41 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:18784)
+[2021-09-13 22:36:41 +0000] [18782] [INFO] Worker exiting (pid: 18782)
+[2021-09-13 22:36:41 +0000] [18783] [INFO] Worker exiting (pid: 18783)
+[2021-09-13 22:36:41 +0000] [18784] [INFO] Worker exiting (pid: 18784)
+[2021-09-13 22:36:42 +0000] [1790] [WARNING] Worker with pid 18784 was terminated due to signal 9
+[2021-09-13 22:36:43 +0000] [1790] [WARNING] Worker with pid 18783 was terminated due to signal 9
+[2021-09-13 22:36:43 +0000] [21450] [INFO] Booting worker with pid: 21450
+[2021-09-13 22:36:43 +0000] [21451] [INFO] Booting worker with pid: 21451
+[2021-09-13 22:36:43 +0000] [1790] [WARNING] Worker with pid 18782 was terminated due to signal 9
+[2021-09-13 22:36:43 +0000] [21453] [INFO] Booting worker with pid: 21453
+[2021-09-14 08:41:27 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:21450)
+[2021-09-14 08:41:28 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:21451)
+[2021-09-14 08:41:28 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:21453)
+[2021-09-14 08:41:30 +0000] [1790] [WARNING] Worker with pid 21450 was terminated due to signal 9
+[2021-09-14 08:41:30 +0000] [1790] [WARNING] Worker with pid 21451 was terminated due to signal 9
+[2021-09-14 08:41:30 +0000] [1790] [WARNING] Worker with pid 21453 was terminated due to signal 9
+[2021-09-14 08:41:30 +0000] [66814] [INFO] Booting worker with pid: 66814
+[2021-09-14 08:41:30 +0000] [66813] [INFO] Booting worker with pid: 66813
+[2021-09-14 08:41:30 +0000] [66815] [INFO] Booting worker with pid: 66815
+[2021-09-14 22:31:21 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:66813)
+[2021-09-14 22:31:21 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:66814)
+[2021-09-14 22:31:21 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:66815)
+[2021-09-14 22:31:21 +0000] [66813] [INFO] Worker exiting (pid: 66813)
+[2021-09-14 22:31:21 +0000] [66814] [INFO] Worker exiting (pid: 66814)
+[2021-09-14 22:31:21 +0000] [66815] [INFO] Worker exiting (pid: 66815)
+[2021-09-14 22:31:22 +0000] [1790] [WARNING] Worker with pid 66813 was terminated due to signal 9
+[2021-09-14 22:31:22 +0000] [1790] [WARNING] Worker with pid 66814 was terminated due to signal 9
+[2021-09-14 22:31:22 +0000] [1790] [WARNING] Worker with pid 66815 was terminated due to signal 9
+[2021-09-14 22:31:22 +0000] [1790] [DEBUG] 2 workers
+[2021-09-14 22:31:23 +0000] [1790] [DEBUG] 3 workers
+[2021-09-14 22:31:24 +0000] [107380] [INFO] Booting worker with pid: 107380
+[2021-09-14 22:31:24 +0000] [107201] [INFO] Booting worker with pid: 107201
+[2021-09-14 22:31:24 +0000] [107202] [INFO] Booting worker with pid: 107202
+[2021-09-15 07:42:45 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:107201)
+[2021-09-15 07:42:45 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:107202)
+[2021-09-15 07:42:45 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:107380)
+[2021-09-15 07:42:45 +0000] [107201] [INFO] Worker exiting (pid: 107201)
+[2021-09-15 07:42:45 +0000] [107202] [INFO] Worker exiting (pid: 107202)
+[2021-09-15 07:42:45 +0000] [107380] [INFO] Worker exiting (pid: 107380)
+[2021-09-15 07:42:46 +0000] [1790] [WARNING] Worker with pid 107201 was terminated due to signal 9
+[2021-09-15 07:42:47 +0000] [1790] [WARNING] Worker with pid 107380 was terminated due to signal 9
+[2021-09-15 07:42:46 +0000] [1790] [WARNING] Worker with pid 107202 was terminated due to signal 9
+[2021-09-15 07:42:49 +0000] [127424] [INFO] Booting worker with pid: 127424
+[2021-09-15 07:42:49 +0000] [127436] [INFO] Booting worker with pid: 127436
+[2021-09-15 07:42:49 +0000] [127349] [INFO] Booting worker with pid: 127349
+[2021-09-15 10:06:24 +0000] [127349] [DEBUG] GET /
+[2021-09-15 10:06:25 +0000] [127436] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2021-09-15 10:06:25 +0000] [127436] [DEBUG] Ignoring EPIPE
+[2021-09-15 10:06:30 +0000] [127424] [DEBUG] GET /home/
+[2021-09-15 10:07:06 +0000] [127349] [DEBUG] GET /faire_don/
+[2021-09-15 10:07:07 +0000] [127436] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2021-09-15 10:07:07 +0000] [127436] [DEBUG] Ignoring EPIPE
+[2021-09-15 10:07:23 +0000] [127424] [DEBUG] GET /actualite/
+/home/sneezy/django_project/ong_acs/acs_home/views.py:61: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'acs_home.models.Actualite'> QuerySet.
+  paginator = Paginator(actualite, 3)
+Internal Server Error: /actualite/
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 46, in validate_number
+    number = int(number)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/ong_acs/acs_home/views.py", line 64, in actualite
+    albums = paginator.page(page)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 73, in page
+    number = self.validate_number(number)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 48, in validate_number
+    raise PageNotAnInteger(_('That page number is not an integer'))
+django.core.paginator.PageNotAnInteger: Ce numéro de page n’est pas un nombre entier
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "acs_home_actualite" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "acs_home_actualite"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sneezy/django_project/ong_acs/acs_home/views.py", line 66, in actualite
+    albums = paginator.page(1)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 73, in page
+    number = self.validate_number(number)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 94, in count
+    return c()
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/models/query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "acs_home_actualite" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "acs_home_actualite"
+                                          ^
+
+[2021-09-15 10:07:24 +0000] [127436] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+[2021-09-15 10:07:24 +0000] [127436] [DEBUG] Ignoring EPIPE
+[2021-09-15 10:08:29 +0000] [127349] [DEBUG] GET /actualite/
+/home/sneezy/django_project/ong_acs/acs_home/views.py:61: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'acs_home.models.Actualite'> QuerySet.
+  paginator = Paginator(actualite, 3)
+Internal Server Error: /actualite/
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 46, in validate_number
+    number = int(number)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/ong_acs/acs_home/views.py", line 64, in actualite
+    albums = paginator.page(page)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 73, in page
+    number = self.validate_number(number)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 48, in validate_number
+    raise PageNotAnInteger(_('That page number is not an integer'))
+django.core.paginator.PageNotAnInteger: Ce numéro de page n’est pas un nombre entier
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedTable: relation "acs_home_actualite" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "acs_home_actualite"
+                                          ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/handlers/base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/sneezy/django_project/ong_acs/acs_home/views.py", line 66, in actualite
+    albums = paginator.page(1)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 73, in page
+    number = self.validate_number(number)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 51, in validate_number
+    if number > self.num_pages:
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 100, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/utils/functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/core/paginator.py", line 94, in count
+    return c()
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/models/query.py", line 411, in count
+    return self.query.get_count(using=self.db)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 515, in get_count
+    number = obj.get_aggregation(using, ['__count'])['__count']
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/models/sql/query.py", line 500, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/django/db/backends/utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: relation "acs_home_actualite" does not exist
+LINE 1: SELECT COUNT(*) AS "__count" FROM "acs_home_actualite"
+                                          ^
+
+[2021-09-15 12:28:35 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:127349)
+[2021-09-15 12:28:36 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:127424)
+[2021-09-15 12:28:36 +0000] [127349] [INFO] Worker exiting (pid: 127349)
+[2021-09-15 12:28:36 +0000] [127424] [INFO] Worker exiting (pid: 127424)
+[2021-09-15 12:28:36 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:127436)
+[2021-09-15 12:28:36 +0000] [127436] [INFO] Worker exiting (pid: 127436)
+[2021-09-15 12:28:38 +0000] [1790] [WARNING] Worker with pid 127436 was terminated due to signal 9
+[2021-09-15 12:28:38 +0000] [1790] [WARNING] Worker with pid 127349 was terminated due to signal 9
+[2021-09-15 12:28:38 +0000] [1790] [WARNING] Worker with pid 127424 was terminated due to signal 9
+[2021-09-15 12:28:38 +0000] [1790] [DEBUG] 1 workers
+[2021-09-15 12:28:38 +0000] [1790] [DEBUG] 3 workers
+[2021-09-15 12:28:39 +0000] [146633] [INFO] Booting worker with pid: 146633
+[2021-09-15 12:28:39 +0000] [146636] [INFO] Booting worker with pid: 146636
+[2021-09-15 12:28:39 +0000] [146635] [INFO] Booting worker with pid: 146635
+[2021-09-15 17:02:12 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:146633)
+[2021-09-15 17:02:12 +0000] [146633] [INFO] Worker exiting (pid: 146633)
+[2021-09-15 17:02:12 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:146635)
+[2021-09-15 17:02:12 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:146636)
+[2021-09-15 17:02:12 +0000] [146635] [INFO] Worker exiting (pid: 146635)
+[2021-09-15 17:02:12 +0000] [146636] [INFO] Worker exiting (pid: 146636)
+[2021-09-15 17:02:13 +0000] [1790] [WARNING] Worker with pid 146636 was terminated due to signal 9
+[2021-09-15 17:02:13 +0000] [1790] [WARNING] Worker with pid 146635 was terminated due to signal 9
+[2021-09-15 17:02:13 +0000] [1790] [WARNING] Worker with pid 146633 was terminated due to signal 9
+[2021-09-15 17:02:15 +0000] [160472] [INFO] Booting worker with pid: 160472
+[2021-09-15 17:02:15 +0000] [160471] [INFO] Booting worker with pid: 160471
+[2021-09-15 17:02:15 +0000] [160476] [INFO] Booting worker with pid: 160476
+[2021-09-15 18:40:10 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:160471)
+[2021-09-15 18:40:10 +0000] [160471] [INFO] Worker exiting (pid: 160471)
+[2021-09-15 18:40:10 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:160472)
+[2021-09-15 18:40:10 +0000] [160472] [INFO] Worker exiting (pid: 160472)
+[2021-09-15 18:40:10 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:160476)
+[2021-09-15 18:40:10 +0000] [160476] [INFO] Worker exiting (pid: 160476)
+[2021-09-15 18:40:11 +0000] [1790] [WARNING] Worker with pid 160471 was terminated due to signal 9
+[2021-09-15 18:40:11 +0000] [1790] [WARNING] Worker with pid 160476 was terminated due to signal 9
+[2021-09-15 18:40:12 +0000] [1790] [WARNING] Worker with pid 160472 was terminated due to signal 9
+[2021-09-15 18:40:12 +0000] [1790] [DEBUG] 2 workers
+[2021-09-15 18:40:12 +0000] [1790] [DEBUG] 3 workers
+[2021-09-15 18:40:12 +0000] [161787] [INFO] Booting worker with pid: 161787
+[2021-09-15 18:40:12 +0000] [161784] [INFO] Booting worker with pid: 161784
+[2021-09-15 18:40:12 +0000] [161767] [INFO] Booting worker with pid: 161767
+[2021-09-15 19:06:53 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:161767)
+[2021-09-15 19:06:53 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:161784)
+[2021-09-15 19:06:53 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:161787)
+[2021-09-15 19:06:53 +0000] [161767] [INFO] Worker exiting (pid: 161767)
+[2021-09-15 19:06:53 +0000] [161784] [INFO] Worker exiting (pid: 161784)
+[2021-09-15 19:06:53 +0000] [161787] [INFO] Worker exiting (pid: 161787)
+[2021-09-15 19:06:54 +0000] [1790] [WARNING] Worker with pid 161767 was terminated due to signal 9
+[2021-09-15 19:06:54 +0000] [1790] [WARNING] Worker with pid 161784 was terminated due to signal 9
+[2021-09-15 19:06:54 +0000] [1790] [WARNING] Worker with pid 161787 was terminated due to signal 9
+[2021-09-15 19:06:54 +0000] [163039] [INFO] Booting worker with pid: 163039
+[2021-09-15 19:06:54 +0000] [163042] [INFO] Booting worker with pid: 163042
+[2021-09-15 19:06:54 +0000] [1790] [DEBUG] 2 workers
+[2021-09-15 19:06:54 +0000] [163044] [INFO] Booting worker with pid: 163044
+[2021-09-15 19:06:54 +0000] [1790] [DEBUG] 3 workers
+[2021-09-15 20:29:37 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:163039)
+[2021-09-15 20:29:38 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:163042)
+[2021-09-15 20:29:38 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:163044)
+[2021-09-15 20:29:38 +0000] [163039] [INFO] Worker exiting (pid: 163039)
+[2021-09-15 20:29:38 +0000] [163042] [INFO] Worker exiting (pid: 163042)
+[2021-09-15 20:29:38 +0000] [163044] [INFO] Worker exiting (pid: 163044)
+[2021-09-15 20:29:39 +0000] [1790] [WARNING] Worker with pid 163039 was terminated due to signal 9
+[2021-09-15 20:29:39 +0000] [165606] [INFO] Booting worker with pid: 165606
+[2021-09-15 20:29:39 +0000] [1790] [WARNING] Worker with pid 163042 was terminated due to signal 9
+[2021-09-15 20:29:39 +0000] [1790] [WARNING] Worker with pid 163044 was terminated due to signal 9
+[2021-09-15 20:29:39 +0000] [1790] [DEBUG] 1 workers
+[2021-09-15 20:29:39 +0000] [165608] [INFO] Booting worker with pid: 165608
+[2021-09-15 20:29:40 +0000] [165611] [INFO] Booting worker with pid: 165611
+[2021-09-15 20:29:40 +0000] [1790] [DEBUG] 3 workers
+[2021-09-15 21:18:46 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:165606)
+[2021-09-15 21:18:46 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:165608)
+[2021-09-15 21:18:46 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:165611)
+[2021-09-15 21:18:46 +0000] [165606] [INFO] Worker exiting (pid: 165606)
+[2021-09-15 21:18:46 +0000] [165608] [INFO] Worker exiting (pid: 165608)
+[2021-09-15 21:18:46 +0000] [165611] [INFO] Worker exiting (pid: 165611)
+[2021-09-15 21:18:47 +0000] [1790] [WARNING] Worker with pid 165611 was terminated due to signal 9
+[2021-09-15 21:18:47 +0000] [1790] [WARNING] Worker with pid 165608 was terminated due to signal 9
+[2021-09-15 21:18:47 +0000] [166651] [INFO] Booting worker with pid: 166651
+[2021-09-15 21:18:47 +0000] [166652] [INFO] Booting worker with pid: 166652
+[2021-09-15 21:18:47 +0000] [1790] [WARNING] Worker with pid 165606 was terminated due to signal 9
+[2021-09-15 21:18:47 +0000] [166653] [INFO] Booting worker with pid: 166653
+[2021-09-16 08:06:12 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:166651)
+[2021-09-16 08:06:12 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:166652)
+[2021-09-16 08:06:12 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:166653)
+[2021-09-16 08:06:12 +0000] [166652] [INFO] Worker exiting (pid: 166652)
+[2021-09-16 08:06:12 +0000] [166651] [INFO] Worker exiting (pid: 166651)
+[2021-09-16 08:06:12 +0000] [166653] [INFO] Worker exiting (pid: 166653)
+[2021-09-16 08:06:13 +0000] [1790] [WARNING] Worker with pid 166651 was terminated due to signal 9
+[2021-09-16 08:06:13 +0000] [1790] [WARNING] Worker with pid 166653 was terminated due to signal 9
+[2021-09-16 08:06:13 +0000] [177296] [INFO] Booting worker with pid: 177296
+[2021-09-16 08:06:13 +0000] [177329] [INFO] Booting worker with pid: 177329
+[2021-09-16 08:06:14 +0000] [1790] [WARNING] Worker with pid 166652 was terminated due to signal 9
+[2021-09-16 08:06:14 +0000] [177451] [INFO] Booting worker with pid: 177451
+[2021-09-16 08:43:24 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:177296)
+[2021-09-16 08:43:24 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:177329)
+[2021-09-16 08:43:24 +0000] [1790] [CRITICAL] WORKER TIMEOUT (pid:177451)
+[2021-09-16 08:43:24 +0000] [177296] [INFO] Worker exiting (pid: 177296)
+[2021-09-16 08:43:24 +0000] [177329] [INFO] Worker exiting (pid: 177329)
+[2021-09-16 08:43:24 +0000] [177451] [INFO] Worker exiting (pid: 177451)
+[2021-09-16 08:43:25 +0000] [1790] [WARNING] Worker with pid 177329 was terminated due to signal 9
+[2021-09-16 08:43:25 +0000] [1790] [WARNING] Worker with pid 177296 was terminated due to signal 9
+[2021-09-16 08:43:25 +0000] [1790] [WARNING] Worker with pid 177451 was terminated due to signal 9
+[2021-09-16 08:43:25 +0000] [180292] [INFO] Booting worker with pid: 180292
+[2021-09-16 08:43:25 +0000] [1790] [DEBUG] 1 workers
+[2021-09-16 08:43:25 +0000] [180391] [INFO] Booting worker with pid: 180391
+[2021-09-16 08:43:25 +0000] [180392] [INFO] Booting worker with pid: 180392
+[2021-09-16 08:43:25 +0000] [1790] [DEBUG] 3 workers
+[2021-09-16 08:45:06 +0000] [1790] [INFO] Handling signal: term
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 224, in run
+    handler()
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 257, in handle_term
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sneezy/django_project/env/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/gunicorn/app/wsgiapp.py", line 67, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 231, in run
+    super().run()
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 227, in run
+    self.halt()
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 342, in halt
+    self.stop()
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/gunicorn/arbiter.py", line 382, in stop
+    sock.close_sockets(self.LISTENERS, unlink)
+  File "/home/sneezy/django_project/env/lib/python3.8/site-packages/gunicorn/sock.py", line 212, in close_sockets
+    os.unlink(sock_name)
+FileNotFoundError: [Errno 2] No such file or directory: '/home/sneezy/django_project/run/gunicorn.sock'
+Starting ong_acs as root
+[2021-09-16 08:48:29 +0000] [1904] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/home/sneezy/django_project/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/sneezy/django_project/ong_acs
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: ong_acs
+  default_proc_name: ong_acs.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f6f88ff1f70>
+  on_reload: <function OnReload.on_reload at 0x7f6f890040d0>
+  when_ready: <function WhenReady.when_ready at 0x7f6f890041f0>
+  pre_fork: <function Prefork.pre_fork at 0x7f6f89004310>
+  post_fork: <function Postfork.post_fork at 0x7f6f89004430>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f6f89004550>
+  worker_int: <function WorkerInt.worker_int at 0x7f6f89004670>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f6f89004790>
+  pre_exec: <function PreExec.pre_exec at 0x7f6f890048b0>
+  pre_request: <function PreRequest.pre_request at 0x7f6f890049d0>
+  post_request: <function PostRequest.post_request at 0x7f6f89004a60>
+  child_exit: <function ChildExit.child_exit at 0x7f6f89004b80>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f6f89004ca0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f6f89004dc0>
+  on_exit: <function OnExit.on_exit at 0x7f6f89004ee0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-09-16 08:48:29 +0000] [1904] [INFO] Starting gunicorn 20.1.0
+[2021-09-16 08:48:29 +0000] [1904] [DEBUG] Arbiter booted
+[2021-09-16 08:48:29 +0000] [1904] [INFO] Listening at: unix:/home/sneezy/django_project/run/gunicorn.sock (1904)
+[2021-09-16 08:48:29 +0000] [1904] [INFO] Using worker: sync
+[2021-09-16 08:48:29 +0000] [2308] [INFO] Booting worker with pid: 2308
+[2021-09-16 08:48:29 +0000] [2309] [INFO] Booting worker with pid: 2309
+[2021-09-16 08:48:29 +0000] [2313] [INFO] Booting worker with pid: 2313
+[2021-09-16 08:48:29 +0000] [1904] [DEBUG] 3 workers
+[2021-09-16 08:49:00 +0000] [1904] [CRITICAL] WORKER TIMEOUT (pid:2308)
+[2021-09-16 08:49:00 +0000] [1904] [CRITICAL] WORKER TIMEOUT (pid:2309)
+[2021-09-16 08:49:00 +0000] [1904] [CRITICAL] WORKER TIMEOUT (pid:2313)
+[2021-09-16 08:49:00 +0000] [2313] [INFO] Worker exiting (pid: 2313)
+[2021-09-16 08:49:00 +0000] [2309] [INFO] Worker exiting (pid: 2309)
+[2021-09-16 08:49:00 +0000] [2308] [INFO] Worker exiting (pid: 2308)
+[2021-09-16 08:49:00 +0000] [2500] [INFO] Booting worker with pid: 2500
+[2021-09-16 08:49:00 +0000] [1904] [WARNING] Worker with pid 2308 was terminated due to signal 9
+[2021-09-16 08:49:00 +0000] [1904] [WARNING] Worker with pid 2309 was terminated due to signal 9
+[2021-09-16 08:49:00 +0000] [1904] [DEBUG] 1 workers
+[2021-09-16 08:49:00 +0000] [2501] [INFO] Booting worker with pid: 2501
+[2021-09-16 08:49:00 +0000] [2502] [INFO] Booting worker with pid: 2502
+[2021-09-16 08:49:00 +0000] [1904] [DEBUG] 3 workers
+[2021-09-16 08:53:21 +0000] [1904] [INFO] Handling signal: term
+[2021-09-16 08:53:21 +0000] [2502] [INFO] Worker exiting (pid: 2502)
+[2021-09-16 08:53:21 +0000] [2500] [INFO] Worker exiting (pid: 2500)
+[2021-09-16 08:53:21 +0000] [2501] [INFO] Worker exiting (pid: 2501)
+[2021-09-16 08:53:21 +0000] [1904] [INFO] Shutting down: Master
+Starting ong_acs as root
+[2021-09-16 12:56:50 +0000] [2025] [DEBUG] Current configuration:
+  config: ./gunicorn.conf.py
+  wsgi_app: None
+  bind: ['unix:/home/sneezy/django_project/run/gunicorn.sock']
+  backlog: 2048
+  workers: 3
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: False
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/sneezy/django_project/ong_acs
+  daemon: False
+  raw_env: []
+  pidfile: None
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: None
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: -
+  loglevel: debug
+  capture_output: False
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: ong_acs
+  default_proc_name: ong_acs.wsgi:application
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f25ed2baf70>
+  on_reload: <function OnReload.on_reload at 0x7f25ed2ce0d0>
+  when_ready: <function WhenReady.when_ready at 0x7f25ed2ce1f0>
+  pre_fork: <function Prefork.pre_fork at 0x7f25ed2ce310>
+  post_fork: <function Postfork.post_fork at 0x7f25ed2ce430>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f25ed2ce550>
+  worker_int: <function WorkerInt.worker_int at 0x7f25ed2ce670>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f25ed2ce790>
+  pre_exec: <function PreExec.pre_exec at 0x7f25ed2ce8b0>
+  pre_request: <function PreRequest.pre_request at 0x7f25ed2ce9d0>
+  post_request: <function PostRequest.post_request at 0x7f25ed2cea60>
+  child_exit: <function ChildExit.child_exit at 0x7f25ed2ceb80>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f25ed2ceca0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f25ed2cedc0>
+  on_exit: <function OnExit.on_exit at 0x7f25ed2ceee0>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2021-09-16 12:56:50 +0000] [2025] [INFO] Starting gunicorn 20.1.0
+[2021-09-16 12:56:50 +0000] [2025] [DEBUG] Arbiter booted
+[2021-09-16 12:56:50 +0000] [2025] [INFO] Listening at: unix:/home/sneezy/django_project/run/gunicorn.sock (2025)
+[2021-09-16 12:56:50 +0000] [2025] [INFO] Using worker: sync
+[2021-09-16 12:56:50 +0000] [2409] [INFO] Booting worker with pid: 2409
+[2021-09-16 12:56:50 +0000] [2410] [INFO] Booting worker with pid: 2410
+[2021-09-16 12:56:50 +0000] [2411] [INFO] Booting worker with pid: 2411
+[2021-09-16 12:56:50 +0000] [2025] [DEBUG] 3 workers
+[2021-09-16 12:57:21 +0000] [2025] [CRITICAL] WORKER TIMEOUT (pid:2409)
+[2021-09-16 12:57:21 +0000] [2025] [CRITICAL] WORKER TIMEOUT (pid:2410)
+[2021-09-16 12:57:21 +0000] [2025] [CRITICAL] WORKER TIMEOUT (pid:2411)
+[2021-09-16 12:57:21 +0000] [2409] [INFO] Worker exiting (pid: 2409)
+[2021-09-16 12:57:21 +0000] [2411] [INFO] Worker exiting (pid: 2411)
+[2021-09-16 12:57:21 +0000] [2410] [INFO] Worker exiting (pid: 2410)
+[2021-09-16 12:57:21 +0000] [2605] [INFO] Booting worker with pid: 2605
+[2021-09-16 12:57:21 +0000] [2025] [WARNING] Worker with pid 2410 was terminated due to signal 9
+[2021-09-16 12:57:21 +0000] [2025] [WARNING] Worker with pid 2411 was terminated due to signal 9
+[2021-09-16 12:57:21 +0000] [2025] [DEBUG] 1 workers
+[2021-09-16 12:57:21 +0000] [2606] [INFO] Booting worker with pid: 2606
+[2021-09-16 12:57:21 +0000] [2608] [INFO] Booting worker with pid: 2608
+[2021-09-16 12:57:21 +0000] [2025] [DEBUG] 3 workers
+[2021-09-16 15:45:06 +0000] [2606] [DEBUG] GET /
+[2021-09-16 15:45:12 +0000] [2608] [DEBUG] GET /home/
+[2021-09-16 15:46:01 +0000] [2605] [DEBUG] GET /quisommenous/
+[2021-09-16 15:46:16 +0000] [2605] [DEBUG] GET /actualite/
+[2021-09-16 15:46:41 +0000] [2606] [DEBUG] GET /faire_don/
+[2021-09-16 15:46:55 +0000] [2606] [DEBUG] GET /activite/
+/home/sneezy/django_project/ong_acs/acs_home/views.py:61: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'acs_home.models.Actualite'> QuerySet.
+  paginator = Paginator(actualite, 3)
+[2021-09-16 15:46:58 +0000] [2605] [DEBUG] GET /account/connexion/
+[2021-09-16 15:47:15 +0000] [2605] [DEBUG] GET /faire_don/
+[2021-09-16 15:47:57 +0000] [2608] [DEBUG] GET /actualite/
+[2021-09-16 15:48:00 +0000] [2605] [DEBUG] GET /quisommenous/

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+{% load static %}
+{% load widget_tweaks %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ong-acs</title>
+
+        <!--le font du h2-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Sans+JP:wght@100&family=Pacifico&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <!--le font du h5-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&family=Noto+Sans+JP:wght@100&family=Pacifico&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    
+        <!--les liens-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    
+        <!--les titres-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+    {% block style %}{% endblock  %}
+</head>
+<body>
+
+  <aside class="block">
+    <div class="croix croix-adesion">
+      <i class="fa fa-times"></i>
+    </div>
+  <div class="blokadherent">
+       <h2>JE DEVIENS ADHÉRENT</h2>
+
+       <p>
+        Les adhérents d'ONG-ACS sont des particuliers qui partagent les valeurs de l'association, sa vision et sa mission. Les adhérents forment la légitimité de ONG-ACS.
+       </p>
+
+       <h2>Qui peut adhérer à ONG-ACS ?</h2>
+       
+       <p>
+        Tout individu majeur à jour de sa cotisation peut être adhérent de ONG-ACS.
+       </p>
+
+       <h2>Pourquoi adhérer ?</h2>
+       
+        <ul>
+          <li>Si vous souhaitez contribuer à la lutte contre la pauvreté dans le monde, vous pouvez vous engagez en tant qu'adhérent.</li>
+
+          <li>En tant qu'adhérent de ONG-ACS, vous êtes la voix de l'association dans votre environnement - familial, amical ou professionnel. Vous devenez acteur de la lutte contre la pauvreté dans le monde.</li>
+
+          <li>En adhérant, vous pouvez contribuer de plusieurs façons selon vos moyens, votre expertise, vos intérêts personnels, vos réseaux. Il est également possible de participer aux réflexions, aux événements, aux ateliers et aux activités.</li>
+
+          <li>Les adhérents font partie de l'assemblée générale de l'association. Ils y participent une fois par an afin de voter les rapports d'activités et financiers, ainsi que le budget pour le nouvel exercice. Lors de cette assemblée générale, les adhérents sont également invités à élire en leur sein les nouveaux membres du conseil d'administration de l'association, renouvelé en partie chaque année.</li>
+        </ul>
+
+
+       <h2>Comment adhérer ?</h2>
+
+       <p>Pour adhérer à ONG-ACS veuillez remplir le formulaire ci-dessous</p>
+
+       <form class="containerIscrit" method="POST">
+         
+           <div class="casInscrit">
+             <div class="Titre">
+              Mon adhésion
+             </div>
+             <div class="contenue">
+                 <div class="contenueTxT1">
+                     adhérer à ONG-ACS  
+                 </div>
+
+                 <div class="contenueTxT2">
+                  8 €
+              </div>
+             </div>
+           </div>
+
+
+           <div class="casInscrit">
+            <div class="Titre">
+              Mes Coordonnées
+             </div>
+             <div class="contenue">
+                
+              <div>
+                <span><i class="fa fa-envelope"></i></span>{% render_field form.email type="email" placeholder="Email" class="iptz" %}
+              </div>
+
+            <div class="deuxinput">
+               
+                {% render_field form.civilite  class="select" %}
+                {% render_field form.name type="text" placeholder="Nom" class="iptz" %}
+            </div>
+
+              <div class="deuxinput2">
+       
+                {% render_field form.firt_name type="text" placeholder="Prenom" class="iptz" %}
+                {% render_field form.adress type="text" placeholder="Adresse" class="iptz" %}
+              </div>
+
+              <div class="deuxinput3">
+            
+                {% render_field form.code_postal type="text" placeholder="Code postal" class="iptz" %}
+                 {% render_field form.city type="text" placeholder="Ville" class="iptz" %}
+            </div>
+
+             {% render_field form.country id="" class="pays select" %}
+      
+             {% render_field form.phone type="number" placeholder="Téléphone" class="iptz" %}
+
+             <p class="erreursaisir" style="display: none;color: red;">
+               Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+             </p>
+                  
+             </div>               
+           </div>
+
+
+           <div class="casInscrit">
+
+            <div class="Titre3">Mon Règlemeent</div>
+            <div class="contenu">
+                <p>pour le reglement veuillez prendre part à notre moyens de payement ci-dessous</p>
+
+                <div class="block-carte">
+
+                    <div class="cartes">
+                        <label for="click1" class="label">
+                            <img src="{% static '/img/MasterCard_early_1990s_logo.svg.png' %}" alt="MasterCard_early_1990s_logo" height="100" width="100">
+                        </label>
+
+                        <label for="click2" class="label">
+                            <img src="{% static '/img/visa_PNG30.png' %}" alt="MasterCard_early_1990s_logo" height="100" width="100">
+                        </label>
+                    </div>
+
+                </div>
+                
+               
+              
+        
+
+                <input type="submit" value="VALIDER" id="label">
+            </div>
+
+            <p style="color: red;display:none;" class="alertcoche1">*veuillez cochez une carte bancaire</p>
+
+
+           </div>
+          
+           {% csrf_token %}
+          
+           {% if errors %}
+    <div>
+      {% for key, error in errors %}
+      {% autoescape off %}
+        {{ error }}
+      {% endautoescape %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+      </form>
+  </div>
+</aside>
+           <!--API PAIEMENT-->
+
+           <div class="parentAPI">
+
+            <div class="croix croix-api">
+                <i class="fa fa-times"></i>
+              </div>
+                  
+             <div class="containerApi">
+                             <!-- Set up a container element for the button -->
+                             <div id="paypal-button-container"></div>
+          
+                             <!-- Include the PayPal JavaScript SDK -->
+                          <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+                 
+                        <script>
+                              // Render the PayPal button into #paypal-button-container
+                         paypal.Buttons({
+                 
+                         style: {
+                               color:  'blue',
+                               shape:  'pill',
+                               label:  'pay',
+                               height: 40,
+                             },
+                             
+
+                             // Set up the transaction
+                createOrder: function(data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '8.00'
+                            }
+                        }]
+                    });
+                },
+    
+                // Finalize the transaction
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(orderData) {
+                        // Successful capture! For demo purposes:
+                        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                        var transaction = orderData.purchase_units[0].payments.captures[0];
+                        //alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+                        document.querySelector('.containerIscrit').submit()
+    
+                        // Replace the above to show a success message within this page, e.g.
+                        // const element = document.getElementById('paypal-button-container');
+                        // element.innerHTML = '';
+                        // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                        // Or go to another URL:  actions.redirect('thank_you.html');
+                        document.querySelector('.centre').submit()
+                    });
+                }
+                          }).render('#paypal-button-container');
+                        </script>
+             </div>
+          </div>
+
+<!---FIN API-->
+
+<div class="pere">
+ 
+
+  <nav>
+    <img class="img-respons" style="margin:0; border-radius:20px;position:absolute;" src="{% static '/img/logo.png' %}" height="50" width="50">
+      <div class="hamburger">
+           <div class="lines">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+           </div>
+          <div class="croixheader"></div>
+      </div>
+
+
+    
+      <div class="header">
+        <div class="clip"></div>
+       <img src="{% static '/img/logo.png' %}" height="50" width="50">
+        <a href="{% url 'acs_home:home' %}" id="lien1" title="acceuil">Acceuil</a>
+        <a href="{% url 'acs_home:qui_somme_nous' %}">Qui-Somme-Nous</a>
+        <a href="{% url 'acs_home:actualite' %}">Actualités</a>
+        <a href="{% url 'acs_home:faire_don' %}">Faire-Un-Don</a>
+        <a href="{% url 'acs_home:activite' %}">Nos-Activités</a>
+        <a href="{% url 'account:connexion' %}" target="_blank">Espace-Donateur</a>
+
+</nav>
+
+    {% block contend %}{% endblock  %}
+</div>

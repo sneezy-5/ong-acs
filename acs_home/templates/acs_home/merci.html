@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <!--les liens-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{% static 'acs_home/css/merci.css' %}">
+  <link href="{% static 'fontawesome-free-5.14.0-web/css/all.min.css' %}" rel="stylesheet">
+</head>
+<body>
+    <!--remerciment-->
+<aside class="aside">
+    <div class="case">
+        <p>
+            veuillez verifier votre mail <a href="https://accounts.google.com/AccountChooser/signinchooser?service=mail&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&flowName=GlifWebSignIn&flowEntry=AccountChooser" target="_blank" class="affichemail">mogbbbbbbbbbbbdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</a>
+            pour terminer votre inscription
+        </p>
+
+        <a href="{% url 'acs_home:home' %}" class="btn"><i class="fa fa-angle-double-left"></i>Retour à la page d'acceuil</a>
+    </div>
+</aside>
+
+<script src="{% static 'acs_home/js/merci.js' %}"></script>
+</body>
+</html>

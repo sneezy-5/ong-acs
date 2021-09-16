@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+{% load static %}
+    {% load widget_tweaks %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ong-acs</title>
+    <!--le font du h2-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Noto+Sans+JP:wght@100&family=Pacifico&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!--le font du h5-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Indie+Flower&family=Noto+Sans+JP:wght@100&family=Pacifico&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <!--les liens-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'acs_home/css/faire_don.css' %}">
+    <link rel="stylesheet" href="{% static 'fontawesome-free-5.14.0-web/css/all.min.css' %}">
+
+    <!-- Add meta tags for mobile and IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+<body>
+
+ <!--API PAIEMENT-->
+
+ <div class="parentAPI">
+
+    <div class="croix croix-api">
+        <i class="fa fa-times"></i>
+      </div>
+          
+     <div class="containerApi">
+                     <!-- Set up a container element for the button -->
+                     <div id="paypal-button-container"></div>
+  
+                     <!-- Include the PayPal JavaScript SDK -->
+                  <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+         
+                <script>
+                      // Render the PayPal button into #paypal-button-container
+                 paypal.Buttons({
+                
+                 style: {
+                       color:  'blue',
+                       shape:  'pill',
+                       label:  'pay',
+                       height: 40,
+                     },
+                     
+
+                     // Set up the transaction
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value:  document.querySelector('.number').value
+                    }
+                }]
+            });
+        },
+
+        // Finalize the transaction
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+                // Successful capture! For demo purposes:
+                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                var transaction = orderData.purchase_units[0].payments.captures[0];
+                alert('Transaction '+ transaction.status + ': ' + transaction.id + '\n\nSee console for all available details');
+
+                // Replace the above to show a success message within this page, e.g.
+                // const element = document.getElementById('paypal-button-container');
+                // element.innerHTML = '';
+                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                // Or go to another URL:  actions.redirect('thank_you.html');
+                document.querySelector('.centre').submit()
+            });
+        }
+                  }).render('#paypal-button-container');
+                </script>
+     </div>
+  </div>
+
+<!---FIN API-->
+
+
+
+
+<div class="container">
+  <nav>
+    <img class="img-respons" style="margin:0; border-radius:20px;position:absolute;" src="{% static '/img/logo.png' %}" height="50" width="50">
+      <div class="hamburger">
+           <div class="lines">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+           </div>
+          <div class="croixheader"></div>
+      </div>
+
+       <div class="header">
+        <div class="clip"></div>
+       <img src="{% static '/img/logo.png' %}" height="50" width="50">
+        <a href="{% url 'acs_home:home' %}" id="lien1" title="acceuil">Acceuil</a>
+        <a href="{% url 'acs_home:qui_somme_nous' %}">Qui-Somme-Nous</a>
+        <a href="{% url 'acs_home:actualite' %}">Actualités</a>
+        <a href="{% url 'acs_home:faire_don' %}">Faire-Un-Don</a>
+        <a href="{% url 'acs_home:activite' %}">Nos-Activités</a>
+        <a href="{% url 'account:connexion' %}" target="_blank">Espace-Donateur</a>
+     </div>
+
+
+ </nav>
+
+     <div class="banniere">
+         <h2><span class="mot1">FAITES</span> UN DON AU PLUS <span class="mot2">DEMUNIE</span></h2>
+         <h5>participons au bonheur de tous</h5>
+     </div>
+
+
+     <form class="centre forminscription" action="#" method="POST">
+        {% csrf_token %}
+         <div class="cas1">
+             <div class="Titre">Mon Don</div>
+             <div class="contenu">
+
+                 <div class="choix">
+                     <div class=" choixbtn active donAnnuel">je donne une fois</div>
+                     <div class="choixbtn donMensuel">je donne tous les mois</div>
+                 </div>
+
+                 <div class="containercase">
+
+                   <label for="prix" class="somme active1">
+                           50€
+
+                       <input type="radio" name="on"  id="prix" class="prix" value="50">
+                       
+                   </label>
+
+                   <label for="prix2" class="somme">
+
+                           100€
+
+                       <input  type="radio" name="on"  id="prix2" class="prix" value="100">
+                   </label>
+
+                   <label for="prix3" class="somme">
+
+                         150€
+                     <input type="radio" name="on"  id="prix3" class="prix" value="150">
+                   </label>
+
+                   <label for="prix4" class="somme">
+                       
+
+                        200€
+                    <input type="radio" name="on" id="prix4" class="prix" value="200">
+                   </label>
+                 </div>
+
+
+                 <div class="saisirsomme">
+            
+                    {% render_field form.money type="number"  class="number ipt" value=50  %}
+                    <span>€</span>
+
+                    <p style="color: red; display: none;" class="error">Le don doit être superieur ou égale à 50€</p>
+                 </div>
+             </div>
+         </div>
+
+        <div class="cas2">
+         </div>
+
+
+         <div class="cas3">
+            <div class="Titre">Mon Règlemeent</div>
+            <div class="contenu">
+                <p>pour le reglement veuillez prendre part à notre moyens de payement ci-dessous</p>
+
+                <div class="block-carte">
+
+                    <div class="cartes">
+                        <label for="click1" class="label">
+                            <img src="{% static '/img/MasterCard_early_1990s_logo.svg.png' %}" alt="MasterCard_early_1990s_logo" height="100" width="100">
+                        </label>
+
+                        <label for="click2" class="label">
+                            <img src="{% static '/img/visa_PNG30.png' %}" alt="MasterCard_early_1990s_logo" height="100" width="100">
+                        </label>
+                    </div>
+
+                </div>
+                {% if inscrit_errors %}
+                <div>
+                  {% for key, error in inscrit_errors %}
+                  {% autoescape off %}
+                    {{ error }}
+                  {% endautoescape %}
+                  {% endfor %}
+                </div>
+                {% endif %}
+            
+        
+               
+                <input type="submit" value="VALIDER" id="label">
+            </div>
+
+            <p style="margin-top: 20px;color: red;display: none;" class="alertcoche1">*veuillez cochez une carte bancaire</p>
+         </div>
+     </form>
+    
+
+</div>
+
+<script>
+
+
+    var donMensuel=document.querySelector('.donMensuel').addEventListener('click',function(){
+  cas3.style.display="none"
+  cas2.style.display="flex"
+  containercase.style.flexDirection="column"
+
+  cas2.innerHTML=`
+            
+  <div class="Titre">S'inscrire</div>
+  <div class="contenu">
+     {% render_field forms.last_name type="text" placeholder="Nom" class="inpute iptinscrit" %}
+     {% render_field forms.first_name type="text" placeholder="Prenoms" class="inpute iptinscrit" name="prenoms" %}
+     {% render_field forms.email type="email" placeholder="Email" class="inpute iptinscrit email" name="email" %}
+     {% render_field forms.password1 type="password" placeholder="Mot de pass" class="inpute iptinscrit" name="password" %}
+     {% render_field forms.password2 type="password" placeholder="Confirmer mot de pass" class="inpute iptinscrit" name="confirmMP"%}
+
+     <input type="submit" value="Envoyer" class="envoyer">
+  </div>
+  `
+
+
+
+  /*retirer la class de l'input montant de don*/
+  centre.querySelector(".number.ipt").classList.remove("ipt")
+ 
+})
+</script>
+<!---footer-->
+
+<footer>
+
+    <p><strong>ONG</strong> ACS</p>
+   <div class="bars">
+
+    <div>
+        
+        <strong>Organisation Non Gouvernementale</strong><br>
+        Siège social :   Abidjan Cocody -angré cité caféier 8lot94<br>
+        Mobile : +225 07 79 13 96 76
+        Mobile : +225 07 69 34 08 18
+        Mobile : +33  75 112 19 40
+        Email : ongacs12@gmail.com  
+        
+     </div>
+     
+     <div>
+       <span>NOS VALEURS</span><br>
+        -Responsabilité - Transparence - Qualités des Services - Esprit d'équipe - Intégrité et Respect
+     </div>
+
+     <div>
+      <span>NOS ATOUTS</span><br>
+      Rigueur – Dynamisme – Respect de la clientèle et du planning – Compétence.
+     </div>
+
+     <div>
+      <span>CONTACTEZ-NOUS</span><br>
+     <a href="https://web.facebook.com/ongacs12" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://gmail.com" target="_blanc"><i class="fab fa-google-plus-g"></i></a>
+     </div>
+   </div>
+
+   <div class="sign">
+    © <span>ESO-DEV</span> 2021 | Agence web - Marketing Digital-Abidjan
+  </div>
+  </footer>
+
+</div>
+<script src="{% static 'acs_home/js/faire_don.js' %}"></script>
+</body>
+</html>

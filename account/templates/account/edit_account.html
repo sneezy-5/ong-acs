@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture</title>
+</head>
+<body>
+    <div class="codeajoutphoto">
+ 
+        <form action="" class="formparam" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="ajoutPhoto">
+                <h3>AJOUTER UNE PHOTO</h3>
+    
+    
+             <div class="jsphoto">
+                <label for="fichier" class="label-file"><canvas width="800" height="500" class="canva"></canvas><i class="fa fa-camera iconecamera"></i></label>
+                 {{ form.as_p }}
+                <input type="submit" value="Ajouter" class="btn">
+             </div>
+            </div>
+    
+        </form>
+</body>
+</html>

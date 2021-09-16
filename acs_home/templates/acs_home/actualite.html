@@ -1,0 +1,123 @@
+{% extends 'acs_home/base.html' %}
+{% load static %}
+
+{% block style %}
+
+<link rel="stylesheet" href="{% static 'acs_home/css/actualite.css' %}">
+<link rel="stylesheet" href="{% static 'fontawesome-free-5.14.0-web/css/all.min.css' %}">
+{% endblock %}
+
+{% block contend %}
+
+
+
+<div class="banniere">
+    <h2>ACTUALITÉS</h2>
+    <h5>participons au bonheur de tous</h5>
+</div>
+
+<div class="centre">
+    <div class="leftbars">
+
+
+
+
+
+
+{% for actu in albums %}
+
+<div class="actus">
+         
+ <div class="dateactu">
+    <div class="cas jours">{{actu.date_add|date:"d" }}</div>
+    <div class="cas mois">{{actu.date_add|date:"m" }}</div>
+    <div class="cas annee">{{actu.date_add|date:"Y" }}</div>
+ </div>
+
+ <div class="imgactu">
+     <img src="{{ actu.image.url }}" alt="" height="100" width="100" class="imgactualite">
+     <div class="proprio">
+       <p><a href="{% url 'acs_home:faire_don' %}">Je fait un don</a></p>
+     </div>
+ </div>
+
+ <div class="textactu">
+    <h2 class="titreactu"> {{ actu.title }}</h2>
+     <p class="textactualite">
+      {{ actu.describe|truncatechars:80 }}
+     </p>
+     <a href="{% url 'acs_home:detail_actualite' actu.id %}" class="liensactu">En Savoir plus</a>
+ </div>
+</div>
+
+
+{% endfor %}
+{% if paginate %}
+<nav aria-label="">
+  <ul class="pager">
+    {% if albums.has_previous %}
+        <button style=" background-color: rgb(49, 172, 19);"><a href="?page={{ albums.previous_page_number }}" style="color: rgb(9, 64, 90); text-decoration: none;">Précédent</a></button>
+    {% endif %}
+    {% if albums.has_next %}
+        <button style=" background-color: rgb(49, 172, 19);"><a href="?page={{ albums.next_page_number }}"  style="color: rgb(9, 64, 90); text-decoration: none;">Suivant</a></button>
+    {% endif %}
+  </ul>
+</nav>
+{% endif %}
+    </div>
+    
+
+    <div class="rightbars">
+
+     <iframe data-offset="70" data-constraint=".rightbars" class="pluginfb plgnonrespons" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fongacs12&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=197812702312256" width="auto" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+     <iframe class="pluginfb plgrespons" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fongacs12&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=197812702312256" width="auto" height="400" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+
+    <footer>
+
+     <p><strong>ONG</strong> ACS</p>
+    <div class="bars">
+ 
+     <div>
+         
+         <strong>Organisation Non Gouvernementale</strong><br>
+         Siège social :   Abidjan Cocody -angré cité caféier 8lot94<br>
+         Mobile : +225 07 79 13 96 76
+         Mobile : +225 07 69 34 08 18
+         Mobile : +33  75 112 19 40
+         Email : ongacs12@gmail.com  
+         
+      </div>
+      
+      <div>
+        <span>NOS VALEURS</span><br>
+         -Responsabilité - Transparence - Qualités des Services - Esprit d'équipe - Intégrité et Respect
+      </div>
+ 
+      <div>
+       <span>NOS ATOUTS</span><br>
+       Rigueur – Dynamisme – Respect de la clientèle et du planning – Compétence.
+      </div>
+ 
+      <div>
+       <span>CONTACTEZ-NOUS</span><br>
+      <a href="https://web.facebook.com/ongacs12" target="_blank"><i class="fab fa-facebook-f"></i></a>
+     <a href="https://gmail.com" target="_blanc"><i class="fab fa-google-plus-g"></i></a>
+      </div>
+    </div>
+ 
+    <div class="sign">
+     © <span>ESO-DEV</span> 2021 | Agence web - Marketing Digital-Abidjan
+   </div>
+   </footer>
+
+     <div class="btn-devis">ADHERER À ONG-ACS<i class="fa fa-clipboard-list"></i></div>
+</div>
+<script src="{% static 'acs_home/js/actualite.js' %}"></script>
+
+
+
+{% endblock%}
+
+
+
