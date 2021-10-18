@@ -104,7 +104,7 @@ WSGI_APPLICATION = 'ong_acs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql', # on utilise l'adaptateur postgresql
         'NAME': 'ongacs', # le nom de notre base de données créée précédemment
@@ -113,9 +113,9 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     }
-}
+}"""
 
-"""DATABASES = {
+DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.mysql',
        'NAME': 'ong_acs',
@@ -125,7 +125,6 @@ DATABASES = {
        'PORT': '3306',
    }
 }
-"""
 
 
 # Password validation

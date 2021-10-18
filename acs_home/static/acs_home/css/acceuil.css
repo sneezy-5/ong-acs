@@ -63,7 +63,7 @@
   
   
   .banniere{
-  background: linear-gradient(to right, #00000080,#00000014),center/cover no-repeat url('/static/img/ong8.jpg');
+  background: linear-gradient(to right, #00000080,#00000014),center/cover no-repeat url(/static/img/ong8.jpg);
   background-attachment:fixed;
   height:100%;
   width:100%;
@@ -251,7 +251,7 @@
 	.leftbars .cas:nth-child(1) a:nth-child(1){
 	 height:400px;
 	 width:50%;
-	 background:center/cover no-repeat url('/static/img/ong4.jpg');
+	 background:center/cover no-repeat url('/static/img/5.jpg');
 	 display:flex;
 	 justify-content:center;
 	 align-items:center;
@@ -262,7 +262,7 @@
   
   
 	   .leftbars .cas:nth-child(1) a:nth-child(1):hover{
-	 background:linear-gradient(to left,#00000052, #0000004d), center/cover no-repeat url('/static/img/ong4.jpg');
+	 background:linear-gradient(to left,#00000052, #0000004d), center/cover no-repeat url('/static/img/5.jpg');
    }
   
    .leftbars .cas:nth-child(1) a:nth-child(1) button{
@@ -330,7 +330,7 @@
 	   .leftbars .cas:nth-child(2) a:nth-child(2){
 	 height:400px;
 	 width:50%;
-	 background:center/cover no-repeat url('/static/img/ong9.jpg');
+	 background:center/cover no-repeat url('/static/img/2.jpg');
 	 display:flex;
 	 justify-content:center;
 	 align-items:center;
@@ -339,7 +339,7 @@
   
   
    .leftbars .cas:nth-child(2) a:nth-child(2):hover{
-	   background:linear-gradient(to left,#00000052, #0000004d), center/cover no-repeat url('/static/img/ong9.jpg');
+	   background:linear-gradient(to left,#00000052, #0000004d), center/cover no-repeat url('/static/img/2.jpg');
    }
   
 	 .leftbars .cas:nth-child(2) a:nth-child(2) button{
@@ -483,7 +483,7 @@
    }
   
 	  .leftbars .cas:nth-child(4) .img1{
-	 background:center/cover no-repeat url('/static/img/ong8.jpg');
+	 background:center/cover no-repeat url('/static/img/3.jpg');
 	 display:flex;
 	 justify-content:center;
 	 align-items:center
@@ -562,7 +562,7 @@
    }
   
 	   .leftbars .cas:nth-child(6) .img4{
-	 background:center/cover no-repeat url('/static/img/ong6.jpg');
+	 background:center/cover no-repeat url('/static/img/6.jpg');
 	 display:flex;
 	 justify-content:center;
 	 align-items:center
@@ -609,7 +609,7 @@
    }
   
    .leftbars .cas:nth-child(8) .img6{
-	 background:center/cover no-repeat url('/static/img/ong12.jpg')
+	 background:center/cover no-repeat url('/static/img/1.jpg')
    }
   
 	   .leftbars .cas:nth-child(8) .textcontenue8{
@@ -1473,6 +1473,10 @@
 	  top:0px;
 	  z-index:5;
 	  margin-top:-1px;
+	  position:fixed;
+	  left:0;
+	  right:0;
+	  top:0
   }
   
   .hamburger{
@@ -1782,7 +1786,7 @@
   }
   
   .leftbars .cas:nth-child(1) a:nth-child(1){
-	height:200px
+	height:50%
   }
   
   .leftbars .cas:nth-child(2) a:nth-child(2){

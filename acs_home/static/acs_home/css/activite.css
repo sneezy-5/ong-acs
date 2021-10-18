@@ -1086,6 +1086,10 @@ border-radius:5px
 		  top:0px;
 		  z-index:5;
 		  margin-top:-1px;
+		  position:fixed;
+		  top:0;
+		  left:0;
+		  right:0
 		 }
 	  
 	  .hamburger{
@@ -1217,7 +1221,8 @@ border-radius:5px
 		  height:auto;
 		  justify-content:center;
 		  align-items:center;
-		  flex-direction:column
+		  flex-direction:column;
+		  z-index:0
 		}
 	  
 	  

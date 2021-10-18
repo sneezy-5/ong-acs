@@ -214,7 +214,7 @@ font-family: 'Shadows Into Light', cursive;
   	display:flex;
   	justify-content:center;
   	align-items:center;
-
+    z-index:1
   }
 
   .containercase ul{
@@ -635,7 +635,6 @@ border-radius:5px
 		  line-height:2;;
 		  background-color:#343434;
 		  bottom:0;
-		  z-index:1;
 		  top:5px;
 		  width:100%;
 		  z-index:8
@@ -647,7 +646,8 @@ border-radius:5px
 		z-index:9;
 		display:flex;
 		margin-top:150px;
-		margin-left:31px
+		margin-left:31px;
+		z-index:0
 		}
 		
 		.bars div{
@@ -713,6 +713,7 @@ border-radius:5px
           font-family: 'Noto Sans JP', sans-serif;
           font-family: 'Pacifico', cursive;
           font-family: 'Shadows Into Light', cursive;
+          z-index:1
 		}
 		
 		footer p strong{
@@ -746,7 +747,7 @@ border-radius:5px
 	height:100%;
 	width:100%;
 	background-color: #000000bd;
-	z-index:5000000000;
+	z-index:500000000000;
 	display:none;
 	flex-direction:column;
 	justify-content:center;
@@ -756,10 +757,17 @@ border-radius:5px
 	
 	.parentAPI .containerApi{
 	height:auto;
-	width:600px;
-	background:#ffffff;
+	width:100%;
 	overflow:auto;
-	border-radius:5px
+	border-radius:5px;
+	}
+
+	.containerApi #paypal-button-container{
+	   display:flex;
+	   justify-content:center;
+	   align-items:center;;
+	   background:#ffffff;;
+	   height:auto
 	}
 	
 	.parentAPI .croix{
@@ -875,6 +883,10 @@ border-radius:5px
 		  top:0px;
 		  z-index:5;
 		  margin-top:-1px;
+		  position:fixed;
+		  top:0;
+		  left:0;
+		  right:0
 		 }
 	  
 	  .hamburger{
@@ -1133,6 +1145,10 @@ border-radius:5px
 	  background: #408ac1;
 	  border-radius:5px 5px 0px 0px;
 	  font-size:25px;
+  }
+
+  .cas2 small{
+  	font-size:12px
   }
 
     .centre .cas3{

@@ -307,7 +307,8 @@ font-family: 'Shadows Into Light', cursive;
 	  z-index:9;
 	  display:flex;
 	  margin-top:150px;
-	  margin-left:31px
+	  margin-left:31px;
+	  z-index:0
 	  }
 	  
 	  .bars div{
@@ -375,6 +376,7 @@ font-family: 'Indie Flower', cursive;
 font-family: 'Noto Sans JP', sans-serif;
 font-family: 'Pacifico', cursive;
 font-family: 'Shadows Into Light', cursive;
+z-index:0
 	  }
 
 	  footer p:nth-child(1){
@@ -1107,6 +1109,10 @@ border-radius:5px
 		top:0px;
 		z-index:5;
 		margin-top:-1px;
+    position:fixed;
+    left:0;
+    right:0;
+    top:0
 	   }
 	
 	.hamburger{
@@ -1849,7 +1855,6 @@ border-radius:5px
 	/*fin responsive btn-devis height*/
 	
 	/*fin responsive header*/
-
 
 
 

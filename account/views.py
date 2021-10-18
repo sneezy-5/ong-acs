@@ -5,19 +5,16 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .forms import UserCreation, ConnexionForm, ParagraphErrorList, AccountUpdateForm
 from .models import  Account
 from acs_home import forms
-from django.core.mail import BadHeaderError, send_mail
+#from django.core.mail import BadHeaderError, send_mail
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-import random
 from django.conf import settings
 
 from django.core.files.storage import default_storage
 from django.core.files.storage import FileSystemStorage
-import os
-#import cv2
-import json
-import base64
+from hashlib import sha1
+
 
 
 
@@ -25,10 +22,8 @@ def confirm_page(request, page_id):
     """verifie si le compte existe et si oui il active le compte
         si le compte est activé on retourne un page d'erreur
     """
-    int_list = random.randint(200, 900)
 
-    list_random = ["azerty%dqssd" %(int_list), "poiu%dtryf"%(int_list)]
-    user = get_object_or_404(Account, pk=page_id)
+    user = get_object_or_404(Account, username=page_id[0:10])
     if user.is_active == True:
         return render(request, '404.html')
         
@@ -36,12 +31,7 @@ def confirm_page(request, page_id):
     else:
         user.is_active=True
         user.save()
-        rand_shuffle = random.shuffle(list_random)
-        #randon_choce = random.choice(rand_shuffle)
-        #print(randon_choce)
-        #send_mail("code client", "utilisez ce code {} pour vous connecter ouvotre email".format(randon_choce), "adingranarcisse2@gmail.com" ,[request.POST.get("email")] )
 
-    
     context = {
         'email': user.email,
   
@@ -65,7 +55,7 @@ def connexion(request):
             user = authenticate(request, email=email, password=password)
             if user is not None:
                 if user.is_active == False:
-                    return render("account/confirme.html")
+                    return render(request,"account/confirme.html")
                 else:
                     login(request, user)
                     return redirect('account:espace')

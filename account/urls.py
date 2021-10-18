@@ -5,7 +5,7 @@ from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('confirm/<int:page_id>/', views.confirm_page, name='confirm'),
+    path('confirm/<str:page_id>/', views.confirm_page, name='confirm'),
     path('escpace', views.espaceMembre, name='espace'),
     path('connexion/', views.connexion, name='connexion'),
     path('<user_id>/edit/', views.edit_account_view, name="edit"),

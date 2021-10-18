@@ -166,7 +166,7 @@ margin:12px
 .rightbars .banniere{
   height: 250px;
   width: 100%;
-  background:linear-gradient(to bottom, #00000045, #00000066),center/cover no-repeat url('/static/img/ong17.jpg');
+  background:linear-gradient(to bottom, #00000045, #00000066),center/cover no-repeat url(img/ong17.jpg);
   display:flex;
   justify-content:center;
   align-items:center;

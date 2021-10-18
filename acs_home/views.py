@@ -3,14 +3,14 @@ from django.http.response import HttpResponse
 from django.shortcuts import render, redirect,  get_object_or_404
 from .forms import  Adherer, DonForm, ParagraphErrorList
 from account.forms import UserCreation, ConnexionForm
-from .models import Activite, Actualite, Adherant, Don
+from .models import Activite, Actualite, Adherant
 from acs_home import forms
-from django.core.mail import BadHeaderError, send_mail
+from django.core.mail import BadHeaderError, send_mail, EmailMultiAlternatives
 from django.core.mail import BadHeaderError
 from django.contrib import messages
-import random
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from account.models import Account
+from hashlib import md5, sha1
 
 # Come home page
 def home(request):
@@ -184,16 +184,26 @@ def faire_don(request):
                 if formsInsc.is_valid():
                 
                     
-                    contact = Account.objects.filter(email=request.POST.get('email'))
-                    if not contact.exists():
-                        formsInsc.save()
-                        user_id = Account.objects.get(email=request.POST.get('email'))
+                    """contact = Account.objects.filter(email=request.POST.get('email'))
+                    if not contact.exists():"""
+
+
                     
-                        user_id.is_active=False
-                        user_id.username=request.POST.get('email')
-                        user_id.save()
-                        send_mail("Verification de mail", "Cliquez sur ce lien pour confimer votre compte http://ong-acs.herokuapp.com/account/confirm/{}/  .Si vous pensez que c'est une erreur ne faite rien".format(str(user_id.id)), "adingranarcisse2@gmail.com" ,[request.POST.get("email")] )
-                        return render(request, "acs_home/merci.html")
+                    formsInsc.save()
+                    user_id = Account.objects.get(email=request.POST.get('email'))
+                    user_id.username=sha1(str(user_id.id).encode()).hexdigest()[0:10]
+                    user_id.is_active=False
+                    user_id.save()
+                    
+                    #send mail at user to confirm mail
+                    subject, from_email, to = 'Validation de compte', 'adingranarcisse2@gmail.com', '{}'.format(request.POST.get('email'))
+                    text_content = 'Validation de compte.'
+                    html_content = '<p>Cliquez <a href="http://127.0.0.1:8000/account/confirm/{}/">Ici</a>  pour confirmer votre compte </p></br><p>Si vous pensez que c\'est une erreur ne faite rien</p>'.format(sha1(str(user_id.id).encode()).hexdigest()[0:10])
+                    msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
+                    msg.attach_alternative(html_content, "text/html")
+                    msg.send()
+                    #send_mail("Validation de compte", "Cliquez sur ce lien pour confirmer votre compte http://127.0.0.1:8000/account/confirm/{}/ .Si vous pensez que c'est une erreur ne faite rien".format(sha1(str(user_id.id).encode()).hexdigest()[0:10]), "adingranarcisse2@gmail.com " ,[request.POST.get('email')] )
+                    return render(request, "acs_home/merci.html")
                   
             
             # enregistre les dons qui on été fait
